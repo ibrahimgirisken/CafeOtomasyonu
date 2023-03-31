@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeOtomasyonu.WinForms", "CafeOtomasyonu.WinForms\CafeOtomasyonu.WinForms.csproj", "{E5BCFE98-0938-4E16-83DA-95F17392617A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeOtomasyonu.Entities", "CafeOtomasyonu.Entities\CafeOtomasyonu.Entities.csproj", "{BACD35CD-2373-41CB-AC43-5059E9805B6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5BCFE98-0938-4E16-83DA-95F17392617A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BCFE98-0938-4E16-83DA-95F17392617A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BCFE98-0938-4E16-83DA-95F17392617A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BCFE98-0938-4E16-83DA-95F17392617A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACD35CD-2373-41CB-AC43-5059E9805B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACD35CD-2373-41CB-AC43-5059E9805B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACD35CD-2373-41CB-AC43-5059E9805B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACD35CD-2373-41CB-AC43-5059E9805B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7019CAC9-284D-4934-AE17-0B8AEAB507C3}
+	EndGlobalSection
+EndGlobal
