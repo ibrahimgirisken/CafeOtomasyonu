@@ -16,6 +16,7 @@ namespace CafeOtomasyonu.Entities.Validations
             RuleFor(p => p.ProductName).NotEmpty().WithMessage("Ürün Adı alanı boş geçilemez!");
             RuleFor(p => p.UnitPrice1).NotEmpty().WithMessage("Birim Fiyatı1 alanı boş geçilemez!");
             RuleFor(p => p.UnitPrice2).NotEmpty().WithMessage("Birim Fiyatı2 alanı boş geçilemez!");
+            RuleFor(p => p.UnitPrice3).NotEmpty().WithMessage("Birim Fiyatı3 alanı boş geçilemez!");
         }
     }
 }

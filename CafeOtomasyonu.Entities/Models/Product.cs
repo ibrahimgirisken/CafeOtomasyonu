@@ -15,7 +15,9 @@ namespace CafeOtomasyonu.Entities.Models
         public string ProductName { get; set; }
         public decimal UnitPrice1 { get; set; }
         public decimal UnitPrice2 { get; set; }
+        public decimal UnitPrice3 { get; set; }
         public string Description { get; set; }
+        public string Image { get; set; }
         public DateTime Date { get; set; }
         public Menu Menu { get; set; }
     }

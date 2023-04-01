@@ -20,6 +20,8 @@ namespace CafeOtomasyonu.Entities.Mapping
             this.Property(p=>p.ProductName).HasColumnType("varchar").HasMaxLength(50);
             this.Property(p=>p.Description).HasColumnType("varchar").HasMaxLength(300);
             this.Property(p => p.UnitPrice1).HasPrecision(28, 2);
+            this.Property(p => p.UnitPrice2).HasPrecision(28, 2);
+            this.Property(p => p.UnitPrice3).HasPrecision(28, 2);
 
             this.HasRequired(x => x.Menu).WithMany(x => x.Product).HasForeignKey(x => x.MenuId);
         }

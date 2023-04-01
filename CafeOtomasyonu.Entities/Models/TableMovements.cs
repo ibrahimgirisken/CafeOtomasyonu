@@ -12,6 +12,8 @@ namespace CafeOtomasyonu.Entities.Models
         public int Id { get; set; }
         public string SalesNumber { get; set; }
         public int TableId { get; set; }
+        public int MenuId { get; set; }
+        public int ProductId { get; set; }
         public int Amount { get; set; }
         public decimal UnitPrice { get; set; }
         public string Description { get; set; }
