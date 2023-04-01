@@ -1,4 +1,6 @@
 ﻿using CafeOtomasyonu.Entities.Abstracts;
+using CafeOtomasyonu.Entities.Tools;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,13 +12,20 @@ using System.Threading.Tasks;
 
 namespace CafeOtomasyonu.Entities.Repository
 {
-    public class EntityRepositoryBase<TContext, TEntity> : IEntityRepository<TContext, TEntity>
+    public class EntityRepositoryBase<TContext, TEntity,TValidator> : IEntityRepository<TContext, TEntity>
         where TContext : DbContext, new()
-        where TEntity : class, new()
+        where TEntity : class, IEntity,new()
+        where TValidator:IValidator,new()
     {
-        public void AddOrUpdate(TContext context, TEntity entity)
+        public bool AddOrUpdate(TContext context, TEntity entity)
         {
-            context.Set<TEntity>().AddOrUpdate(entity);
+            TValidator validator = new TValidator();
+            bool validationResult = ValidatorTools.Validates(validator, entity);
+            if (validationResult)
+            {
+               context.Set<TEntity>().AddOrUpdate(entity);
+            }
+            return validationResult;
         }
 
         public void Delete(TContext context, Expression<Func<TEntity, bool>> filter)

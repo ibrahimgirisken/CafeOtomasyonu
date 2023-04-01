@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CafeOtomasyonu.Entities.Abstracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CafeOtomasyonu.Entities.Models
 {
-    public class Tables
+    public class Tables : IEntity
     {
         public int Id { get; set; }
         public string TableName { get; set; }
@@ -15,5 +16,6 @@ namespace CafeOtomasyonu.Entities.Models
         public bool Rezerv { get; set; }
         public DateTime SavedDate { get; set; }
         public DateTime UpdateDate { get; set; }
+        public ICollection<TableMovements> TableMovements { get; set; }
     }
 }

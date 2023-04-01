@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CafeOtomasyonu.Entities.Abstracts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -7,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace CafeOtomasyonu.Entities.Models
 {
-    [Table("Sales")]
-    public class Sales
+    public class Sales : IEntity
     {
         public int Id { get; set; }
         public string SalesNumber { get; set; }

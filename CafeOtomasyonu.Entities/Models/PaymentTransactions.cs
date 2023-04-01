@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CafeOtomasyonu.Entities.Abstracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CafeOtomasyonu.Entities.Models
 {
-    public class PaymentTransactions
+    public class PaymentTransactions:IEntity
     {
         public int Id { get; set; }
         public string SalesNumber { get; set; }

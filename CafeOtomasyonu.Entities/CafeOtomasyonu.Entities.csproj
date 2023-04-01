@@ -40,9 +40,19 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.11.5.1\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,7 +61,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstracts\IEntity.cs" />
     <Compile Include="Abstracts\IEntityRepository.cs" />
+    <Compile Include="DAL\MenuDal.cs" />
+    <Compile Include="DAL\PaymentTransactionsDal.cs" />
+    <Compile Include="DAL\ProductDal.cs" />
+    <Compile Include="DAL\RollersDal.cs" />
+    <Compile Include="DAL\SalesDal.cs" />
+    <Compile Include="DAL\TablesDal.cs" />
+    <Compile Include="DAL\TablesMovementsDal.cs" />
+    <Compile Include="DAL\UserMovementsDal.cs" />
+    <Compile Include="DAL\UsersDal.cs" />
     <Compile Include="Mapping\MenuMap.cs" />
     <Compile Include="Mapping\PaymentTransactionsMap.cs" />
     <Compile Include="Mapping\ProductMap.cs" />
@@ -61,10 +81,6 @@
     <Compile Include="Mapping\TablesMap.cs" />
     <Compile Include="Mapping\UserMovementsMap.cs" />
     <Compile Include="Mapping\UsersMap.cs" />
-    <Compile Include="Migrations\202303311940334_CreateDatabase.cs" />
-    <Compile Include="Migrations\202303311940334_CreateDatabase.designer.cs">
-      <DependentUpon>202303311940334_CreateDatabase.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CafeContext.cs" />
     <Compile Include="Models\Menu.cs" />
@@ -78,20 +94,22 @@
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\EntityRepositoryBase.cs" />
+    <Compile Include="Tools\ValidatorTools.cs" />
+    <Compile Include="Validations\MenuValidator.cs" />
+    <Compile Include="Validations\PaymentTransactionsValidator.cs" />
+    <Compile Include="Validations\ProductValidator.cs" />
+    <Compile Include="Validations\RollersValidator.cs" />
+    <Compile Include="Validations\SalesValidator.cs" />
+    <Compile Include="Validations\TableMovementsValidator.cs" />
+    <Compile Include="Validations\TablesValidator.cs" />
+    <Compile Include="Validations\UserMovementsValidator.cs" />
+    <Compile Include="Validations\UsersValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-    <Folder Include="Validations\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202303311940334_CreateDatabase.resx">
-      <DependentUpon>202303311940334_CreateDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
