@@ -81,7 +81,7 @@
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(871, 158);
+            this.ribbon.Size = new System.Drawing.Size(960, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnTables
@@ -91,6 +91,7 @@
             this.btnTables.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTables.ImageOptions.Image")));
             this.btnTables.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTables.ImageOptions.LargeImage")));
             this.btnTables.Name = "btnTables";
+            this.btnTables.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTables_ItemClick);
             // 
             // btnTableMovements
             // 
@@ -144,7 +145,7 @@
             // 
             // btnUserMovements
             // 
-            this.btnUserMovements.Caption = "barButtonItem2";
+            this.btnUserMovements.Caption = "Kullanıcı Hareketleri";
             this.btnUserMovements.Id = 9;
             this.btnUserMovements.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUserMovements.ImageOptions.Image")));
             this.btnUserMovements.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUserMovements.ImageOptions.LargeImage")));
@@ -238,10 +239,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 425);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 470);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(871, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(960, 24);
             // 
             // ribbonPage3
             // 
@@ -256,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 449);
+            this.ClientSize = new System.Drawing.Size(960, 494);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;

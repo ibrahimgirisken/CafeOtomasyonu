@@ -38,6 +38,7 @@
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMenuId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,12 +54,11 @@
             this.colMenuName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -96,8 +96,9 @@
             this.btnClose.Location = new System.Drawing.Point(629, 31);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 38);
-            this.btnClose.TabIndex = 0;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Kapat";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // brnDelete
             // 
@@ -106,8 +107,9 @@
             this.brnDelete.Location = new System.Drawing.Point(548, 31);
             this.brnDelete.Name = "brnDelete";
             this.brnDelete.Size = new System.Drawing.Size(75, 38);
-            this.brnDelete.TabIndex = 0;
+            this.brnDelete.TabIndex = 3;
             this.brnDelete.Text = "Sil";
+            this.brnDelete.Click += new System.EventHandler(this.brnDelete_Click);
             // 
             // btnRefresh
             // 
@@ -115,8 +117,9 @@
             this.btnRefresh.Location = new System.Drawing.Point(167, 31);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 38);
-            this.btnRefresh.TabIndex = 0;
+            this.btnRefresh.TabIndex = 2;
             this.btnRefresh.Text = "Yenile";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnEdit
             // 
@@ -124,8 +127,9 @@
             this.btnEdit.Location = new System.Drawing.Point(86, 31);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 38);
-            this.btnEdit.TabIndex = 0;
+            this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Düzenle";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnNew
             // 
@@ -135,6 +139,7 @@
             this.btnNew.Size = new System.Drawing.Size(75, 38);
             this.btnNew.TabIndex = 0;
             this.btnNew.Text = "Yeni";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // gridControl1
             // 
@@ -144,9 +149,13 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(718, 363);
-            this.gridControl1.TabIndex = 3;
+            this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(CafeOtomasyonu.Entities.Models.Product);
             // 
             // gridView1
             // 
@@ -278,10 +287,6 @@
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(CafeOtomasyonu.Entities.Models.Product);
-            // 
             // frmProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,8 +301,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

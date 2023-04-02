@@ -11,21 +11,26 @@ using System.Windows.Forms;
 using CafeOtomasyonu.WinForms.Menus;
 using DevExpress.XtraEditors;
 using CafeOtomasyonu.WinForms.Products;
+using CafeOtomasyonu.WinForms.Tables;
+using CafeOtomasyonu.WinForms.Users;
 
 namespace CafeOtomasyonu.WinForms.MainMenu
 {
     public partial class frmMainMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+
+        public frmMainMenu()
+        {
+            InitializeComponent();
+            frmUserLogin frm = new frmUserLogin();
+            frm.ShowDialog();
+        }
+
         void FormGet(XtraForm frm)
         {
             frm.MdiParent = this;
             frm.Show();
         }
-        public frmMainMenu()
-        {
-            InitializeComponent();
-        }
-
         private void btnProducts_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmProducts frm=new frmProducts();
@@ -37,5 +42,13 @@ namespace CafeOtomasyonu.WinForms.MainMenu
             frmMenus frm=new frmMenus();
             frm.ShowDialog();
         }
+
+        private void btnTables_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmTables frm=new frmTables();
+            FormGet(frm);
+
+        }
+
     }
 }

@@ -16,6 +16,8 @@ namespace CafeOtomasyonu.Entities.Models
         public bool Rezerv { get; set; }
         public DateTime SavedDate { get; set; }
         public DateTime UpdateDate { get; set; }
+        public string Process { get; set; }
+        public int? UserId { get; set; }
         public ICollection<TableMovements> TableMovements { get; set; }
     }
 }
