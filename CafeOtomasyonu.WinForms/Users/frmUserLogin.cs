@@ -17,9 +17,44 @@ namespace CafeOtomasyonu.WinForms.Users
     {
         private bool inputStatus;
         private CafeContext _context = new CafeContext();
+
+        void getData()
+        {
+            if (Properties.Settings.Default.RememberMe)
+            {
+                txtUserName.Text = Properties.Settings.Default.UserName;
+                txtUserPass.Text = Properties.Settings.Default.Password;
+                chkRememberMe.Checked=true;
+            }
+            else
+            {
+                txtUserName.Text = null;
+                txtUserPass.Text = null;
+                chkRememberMe.Checked = false;
+            }
+        }
+
+        void saveData()
+        {
+            if (chkRememberMe.Checked)
+            {
+                Properties.Settings.Default.UserName = txtUserName.Text;
+                Properties.Settings.Default.Password = txtUserPass.Text;
+                Properties.Settings.Default.RememberMe=true;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                Properties.Settings.Default.UserName = null;
+                Properties.Settings.Default.Password = null;
+                Properties.Settings.Default.RememberMe = false;
+                   Properties.Settings.Default.Save();
+            }
+        }
         public frmUserLogin()
         {
             InitializeComponent();
+            getData();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -41,6 +76,7 @@ namespace CafeOtomasyonu.WinForms.Users
             {
                 inputStatus = true;
                 this.Close();
+                saveData();
             }
             else
             {
@@ -56,6 +92,18 @@ namespace CafeOtomasyonu.WinForms.Users
             {
                 Application.Exit();
             }
+        }
+
+        private void lblRegister_Click(object sender, EventArgs e)
+        {
+            frmRegister frm=new frmRegister(new Entities.Models.Users());
+            frm.ShowDialog();
+        }
+
+        private void btnForgetPass_Click(object sender, EventArgs e)
+        {
+            frmForgetPassword frm=new frmForgetPassword();
+            frm.ShowDialog();
         }
     }
 }

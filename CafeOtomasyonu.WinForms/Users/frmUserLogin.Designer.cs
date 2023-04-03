@@ -33,18 +33,18 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
-            this.btnForgetedPass = new DevExpress.XtraEditors.SimpleButton();
+            this.btnForgetPass = new DevExpress.XtraEditors.SimpleButton();
             this.btnUserLogin = new DevExpress.XtraEditors.SimpleButton();
             this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.txtUserPass = new DevExpress.XtraEditors.TextEdit();
-            this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
+            this.lblRegister = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            this.chkRememberMe = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserPass.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkRememberMe.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -78,7 +78,7 @@
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.btnClose);
-            this.groupControl1.Controls.Add(this.btnForgetedPass);
+            this.groupControl1.Controls.Add(this.btnForgetPass);
             this.groupControl1.Controls.Add(this.btnUserLogin);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(180, 181);
@@ -98,14 +98,15 @@
             this.btnClose.Text = "Kapat";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnForgetedPass
+            // btnForgetPass
             // 
-            this.btnForgetedPass.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnForgetedPass.ImageOptions.Image")));
-            this.btnForgetedPass.Location = new System.Drawing.Point(97, 31);
-            this.btnForgetedPass.Name = "btnForgetedPass";
-            this.btnForgetedPass.Size = new System.Drawing.Size(75, 38);
-            this.btnForgetedPass.TabIndex = 1;
-            this.btnForgetedPass.Text = "Şifremi\r\nUnuttum";
+            this.btnForgetPass.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnForgetedPass.ImageOptions.Image")));
+            this.btnForgetPass.Location = new System.Drawing.Point(97, 31);
+            this.btnForgetPass.Name = "btnForgetPass";
+            this.btnForgetPass.Size = new System.Drawing.Size(75, 38);
+            this.btnForgetPass.TabIndex = 1;
+            this.btnForgetPass.Text = "Parolamı\r\nUnuttum";
+            this.btnForgetPass.Click += new System.EventHandler(this.btnForgetPass_Click);
             // 
             // btnUserLogin
             // 
@@ -142,33 +143,34 @@
             this.txtUserPass.Size = new System.Drawing.Size(274, 22);
             this.txtUserPass.TabIndex = 1;
             // 
-            // hyperlinkLabelControl1
+            // lblRegister
             // 
-            this.hyperlinkLabelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hyperlinkLabelControl1.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(418, 131);
-            this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
-            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(49, 16);
-            this.hyperlinkLabelControl1.TabIndex = 4;
-            this.hyperlinkLabelControl1.Text = "Kayıt Ol";
+            this.lblRegister.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegister.Appearance.Options.UseFont = true;
+            this.lblRegister.Location = new System.Drawing.Point(418, 131);
+            this.lblRegister.Name = "lblRegister";
+            this.lblRegister.Size = new System.Drawing.Size(49, 16);
+            this.lblRegister.TabIndex = 4;
+            this.lblRegister.Text = "Kayıt Ol";
+            this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
             // 
-            // checkEdit1
+            // chkRememberMe
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(209, 129);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit1.Properties.Caption = "Beni hatırla!";
-            this.checkEdit1.Size = new System.Drawing.Size(94, 20);
-            this.checkEdit1.TabIndex = 3;
+            this.chkRememberMe.Location = new System.Drawing.Point(209, 129);
+            this.chkRememberMe.Name = "chkRememberMe";
+            this.chkRememberMe.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkRememberMe.Properties.Appearance.Options.UseFont = true;
+            this.chkRememberMe.Properties.Caption = "Beni hatırla!";
+            this.chkRememberMe.Size = new System.Drawing.Size(94, 20);
+            this.chkRememberMe.TabIndex = 3;
             // 
             // frmUserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 259);
-            this.Controls.Add(this.checkEdit1);
-            this.Controls.Add(this.hyperlinkLabelControl1);
+            this.Controls.Add(this.chkRememberMe);
+            this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.txtUserPass);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.groupControl1);
@@ -186,7 +188,7 @@
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserPass.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkRememberMe.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,11 +200,11 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btnClose;
-        private DevExpress.XtraEditors.SimpleButton btnForgetedPass;
+        private DevExpress.XtraEditors.SimpleButton btnForgetPass;
         private DevExpress.XtraEditors.SimpleButton btnUserLogin;
         private DevExpress.XtraEditors.TextEdit txtUserName;
         private DevExpress.XtraEditors.TextEdit txtUserPass;
-        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
+        private DevExpress.XtraEditors.HyperlinkLabelControl lblRegister;
+        private DevExpress.XtraEditors.CheckEdit chkRememberMe;
     }
 }
