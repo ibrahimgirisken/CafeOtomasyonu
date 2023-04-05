@@ -15,10 +15,11 @@ namespace CafeOtomasyonu.WinForms.Users
 {
     public partial class frmRegister : DevExpress.XtraEditors.XtraForm
     {
-        private CafeContext context = new CafeContext();
-        private UsersDal usersDal = new UsersDal();
+        private CafeContext _context = new CafeContext();
+        private UsersDal _usersDal = new UsersDal();
         private Entities.Models.Users _entity;
-        public bool saveStatus = false;
+        private UserMovements _userMovements=new UserMovements();
+        private  UserMovementsDal _userMovementsDal=new UserMovementsDal();
 
         public Entities.Models.Users Users { get; }
 
@@ -46,10 +47,13 @@ namespace CafeOtomasyonu.WinForms.Users
             if (txtPassword.Text == txtPasswordRepeat.Text)
             {
                 _entity.SavedDate = DateTime.Now;
-                if (usersDal.AddOrUpdate(context, _entity))
+                if (_usersDal.AddOrUpdate(_context, _entity))
                 {
-                    usersDal.Save(context);
-                    saveStatus = true;
+                    _usersDal.Save(_context);
+                    var userIdMax = _context.Users.Max(u => u.Id);
+                    _userMovements.UserId= userIdMax;
+                    string description = "Yeni kullanıcı eklendi!";
+                    _userMovementsDal.UserMovementsDalAdd(_context,_userMovements,description);
                     this.Close();
                 }
             }

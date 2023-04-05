@@ -11,5 +11,16 @@ namespace CafeOtomasyonu.Entities.DAL
 {
     public class UserMovementsDal:EntityRepositoryBase<CafeContext,UserMovements,UserMovementsValidator>
     {
+        public void UserMovementsDalAdd(CafeContext context,UserMovements _userMovements,string description)
+        {
+            UserMovementsDal _userMovementsDal = new UserMovementsDal();
+
+            _userMovements.Date = DateTime.Now;
+            _userMovements.Description = description;
+            if (_userMovementsDal.AddOrUpdate(context, _userMovements))
+            {
+                _userMovementsDal.Save(context);
+            }
+        }
     }
 }

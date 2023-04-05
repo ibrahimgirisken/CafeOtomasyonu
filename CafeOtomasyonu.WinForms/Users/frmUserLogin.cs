@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
 using DevExpress.Internal;
 
@@ -17,7 +18,8 @@ namespace CafeOtomasyonu.WinForms.Users
     {
         private bool inputStatus;
         private CafeContext _context = new CafeContext();
-
+        private UserMovementsDal _userMovementsDal = new UserMovementsDal();
+        private UserMovements _userMovements=new UserMovements();
         void getData()
         {
             if (Properties.Settings.Default.RememberMe)
@@ -72,11 +74,15 @@ namespace CafeOtomasyonu.WinForms.Users
 
         private void btnUserLogin_Click(object sender, EventArgs e)
         {
-            if (_context.Users.Any(u=>u.UserName==txtUserName.Text && u.Password==txtUserPass.Text))
+            var _user =_context.Users.FirstOrDefault(u => u.UserName == txtUserName.Text && u.Password == txtUserPass.Text);
+            if (_user != null)
             {
                 inputStatus = true;
-                this.Close();
                 saveData();
+                _userMovements.UserId = _user.Id;
+                string description= _user.UserName+" adlı kullanıcı giriş sisteme yaptı";
+                _userMovementsDal.UserMovementsDalAdd(_context,_userMovements, description);
+                this.Close();
             }
             else
             {
