@@ -22,7 +22,7 @@ namespace CafeOtomasyonu.WinForms.MainMenu
         public frmMainMenu()
         {
             InitializeComponent();
-            frmUserLogin frm = new frmUserLogin();
+            XtraForm frm = new frmUserLogin();
             frm.ShowDialog();
         }
 
@@ -33,22 +33,27 @@ namespace CafeOtomasyonu.WinForms.MainMenu
         }
         private void btnProducts_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmProducts frm=new frmProducts();
+            XtraForm frm =new frmProducts();
             FormGet(frm);
         }
 
         private void btnMenus_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmMenus frm=new frmMenus();
+            XtraForm frm =new frmMenus();
             frm.ShowDialog();
         }
 
         private void btnTables_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmTables frm=new frmTables();
+            XtraForm frm =new frmTables();
             FormGet(frm);
 
         }
 
+        private void btnTableOrders_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            XtraForm frm = new frmTablesStatus();
+            FormGet(frm);
+        }
     }
 }

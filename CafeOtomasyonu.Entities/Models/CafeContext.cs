@@ -23,6 +23,8 @@ namespace CafeOtomasyonu.Entities.Models
         public DbSet<Tables> Tables { get; set; }
         public DbSet<UserMovements> UserMovements { get; set; }
         public DbSet<Users> Users { get; set; }
+        public  DbSet<Customers> Customers { get; set; }
+        public  DbSet<OrderCode> OrderCodes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -35,6 +37,7 @@ namespace CafeOtomasyonu.Entities.Models
             modelBuilder.Configurations.Add(new TablesMap());
             modelBuilder.Configurations.Add(new UserMovementsMap());
             modelBuilder.Configurations.Add(new UsersMap());
+            modelBuilder.Configurations.Add(new CustomersMap());
         }
     }
 }

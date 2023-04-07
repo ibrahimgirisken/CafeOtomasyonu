@@ -19,6 +19,7 @@ namespace CafeOtomasyonu.Entities.Models
         public string Description { get; set; }
         public string Image { get; set; }
         public DateTime Date { get; set; }
-        public Menu Menu { get; set; }
+        public virtual Menu Menu { get; set; }
+        public virtual ICollection<TableMovements> TableMovements{ get; set; }
     }
 }

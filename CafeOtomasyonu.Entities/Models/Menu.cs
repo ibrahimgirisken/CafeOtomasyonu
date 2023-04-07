@@ -12,6 +12,6 @@ namespace CafeOtomasyonu.Entities.Models
         public int Id { get; set; }
         public string MenuName { get; set; }
         public string Description { get; set; }
-        public ICollection<Product> Product { get; set; }
+        public virtual ICollection<Product> Product { get; set; }
     }
 }

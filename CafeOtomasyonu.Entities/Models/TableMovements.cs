@@ -12,12 +12,14 @@ namespace CafeOtomasyonu.Entities.Models
         public int Id { get; set; }
         public string SalesNumber { get; set; }
         public int TableId { get; set; }
-        public int MenuId { get; set; }
+        //public int MenuId { get; set; }
         public int ProductId { get; set; }
         public int Amount { get; set; }
         public decimal UnitPrice { get; set; }
+        public decimal DiscountTotal { get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
-        public Tables Tables { get; set; }
+        public virtual Tables Tables { get; set; }
+        public virtual  Product Product { get; set; }
     }
 }

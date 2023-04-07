@@ -104,6 +104,12 @@
     <Compile Include="Tables\frmTables.Designer.cs">
       <DependentUpon>frmTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tables\frmTablesStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\frmTablesStatus.Designer.cs">
+      <DependentUpon>frmTablesStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\frmForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,7 @@
     <Compile Include="Users\frmUserLogin.Designer.cs">
       <DependentUpon>frmUserLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinTools\DynamicTables.cs" />
     <EmbeddedResource Include="MainMenu\frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tables\frmTables.resx">
       <DependentUpon>frmTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\frmTablesStatus.resx">
+      <DependentUpon>frmTablesStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmForgetPassword.resx">
       <DependentUpon>frmForgetPassword.cs</DependentUpon>

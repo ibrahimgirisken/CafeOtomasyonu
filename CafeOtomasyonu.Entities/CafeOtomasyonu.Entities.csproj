@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Abstracts\IEntity.cs" />
     <Compile Include="Abstracts\IEntityRepository.cs" />
+    <Compile Include="DAL\CustomersDal.cs" />
     <Compile Include="DAL\MenuDal.cs" />
     <Compile Include="DAL\PaymentTransactionsDal.cs" />
     <Compile Include="DAL\ProductDal.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="DAL\TablesMovementsDal.cs" />
     <Compile Include="DAL\UserMovementsDal.cs" />
     <Compile Include="DAL\UsersDal.cs" />
+    <Compile Include="Mapping\CustomersMap.cs" />
     <Compile Include="Mapping\MenuMap.cs" />
     <Compile Include="Mapping\PaymentTransactionsMap.cs" />
     <Compile Include="Mapping\ProductMap.cs" />
@@ -83,7 +85,9 @@
     <Compile Include="Mapping\UsersMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CafeContext.cs" />
+    <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\OrderCode.cs" />
     <Compile Include="Models\PaymentTransactions.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Rollers.cs" />
@@ -95,6 +99,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\EntityRepositoryBase.cs" />
     <Compile Include="Tools\ValidatorTools.cs" />
+    <Compile Include="Validations\CustomersValidator.cs" />
     <Compile Include="Validations\MenuValidator.cs" />
     <Compile Include="Validations\PaymentTransactionsValidator.cs" />
     <Compile Include="Validations\ProductValidator.cs" />

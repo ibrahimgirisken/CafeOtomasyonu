@@ -53,6 +53,7 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnTableOrders = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -74,9 +75,10 @@
             this.btnRoles,
             this.btnDoviz,
             this.btnHelp,
-            this.btnAbout});
+            this.btnAbout,
+            this.btnTableOrders});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 14;
+            this.ribbon.MaxItemId = 15;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
@@ -197,6 +199,7 @@
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTables);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTableMovements);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnTableOrders);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Masalar";
             // 
@@ -253,6 +256,15 @@
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // btnTableOrders
+            // 
+            this.btnTableOrders.Caption = "Masa Siparişleri";
+            this.btnTableOrders.Id = 14;
+            this.btnTableOrders.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btnTableOrders.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnTableOrders.Name = "btnTableOrders";
+            this.btnTableOrders.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTableOrders_ItemClick);
+            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,5 +311,6 @@
         private DevExpress.XtraBars.BarButtonItem btnHelp;
         private DevExpress.XtraBars.BarButtonItem btnAbout;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem btnTableOrders;
     }
 }

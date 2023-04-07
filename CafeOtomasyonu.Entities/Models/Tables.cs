@@ -17,7 +17,9 @@ namespace CafeOtomasyonu.Entities.Models
         public DateTime SavedDate { get; set; }
         public DateTime UpdateDate { get; set; }
         public string Process { get; set; }
+        public string OrderCode { get; set; }
         public int? UserId { get; set; }
-        public ICollection<TableMovements> TableMovements { get; set; }
+        public virtual ICollection<TableMovements> TableMovements { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

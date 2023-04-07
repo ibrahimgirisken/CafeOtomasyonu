@@ -78,10 +78,10 @@ namespace CafeOtomasyonu.WinForms.Users
             if (_user != null)
             {
                 inputStatus = true;
-                saveData();
-                _userMovements.UserId = _user.Id;
-                string description= _user.UserName+" adlı kullanıcı giriş sisteme yaptı";
-                _userMovementsDal.UserMovementsDalAdd(_context,_userMovements, description);
+                //saveData();
+                //_userMovements.UserId = _user.Id;
+                //string description= _user.UserName+" adlı kullanıcı giriş sisteme yaptı";
+                //_userMovementsDal.UserMovementsDalAdd(_context,_userMovements, description);
                 this.Close();
             }
             else

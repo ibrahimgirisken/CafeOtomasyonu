@@ -22,6 +22,7 @@ namespace CafeOtomasyonu.Entities.Models
         public string Description { get; set; }
         public DateTime SavedDate { get; set; }
         public bool Status { get; set; }
-        public ICollection<UserMovements> UserMovements { get; set; }
+        public virtual ICollection<UserMovements> UserMovements { get; set; }
+        public virtual ICollection<Tables> Tables { get; set; }
     }
 }
