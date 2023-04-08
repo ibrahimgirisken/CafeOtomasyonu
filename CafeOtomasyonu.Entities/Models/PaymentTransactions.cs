@@ -12,6 +12,7 @@ namespace CafeOtomasyonu.Entities.Models
         public int Id { get; set; }
         public string SalesNumber { get; set; }
         public string SalesType { get; set; }
+        public decimal Paid { get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
     }

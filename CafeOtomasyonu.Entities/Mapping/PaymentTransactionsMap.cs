@@ -17,6 +17,7 @@ namespace CafeOtomasyonu.Entities.Mapping
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(p => p.SalesNumber).HasColumnType("varchar").HasMaxLength(15);
+            this.Property(p => p.Paid).HasPrecision(28, 2);
             this.Property(p => p.SalesType).HasColumnType("varchar").HasMaxLength(50);
             this.Property(p => p.Description).HasColumnType("varchar").HasMaxLength(300);
         }
