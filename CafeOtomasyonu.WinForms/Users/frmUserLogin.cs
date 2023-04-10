@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
+using CafeOtomasyonu.WinForms.WinTools;
 using DevExpress.Internal;
 
 namespace CafeOtomasyonu.WinForms.Users
@@ -78,10 +79,11 @@ namespace CafeOtomasyonu.WinForms.Users
             if (_user != null)
             {
                 inputStatus = true;
-                //saveData();
-                //_userMovements.UserId = _user.Id;
-                //string description= _user.UserName+" adlı kullanıcı giriş sisteme yaptı";
-                //_userMovementsDal.UserMovementsDalAdd(_context,_userMovements, description);
+                saveData();
+                UserSettings.userId=_user.Id;
+                _userMovements.UserId = _user.Id;
+                string description = _user.UserName + " adlı kullanıcı giriş sisteme yaptı";
+                _userMovementsDal.UserMovementsDalAdd(_context, _userMovements, description);
                 this.Close();
             }
             else

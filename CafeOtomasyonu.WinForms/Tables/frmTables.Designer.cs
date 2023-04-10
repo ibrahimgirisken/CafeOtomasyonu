@@ -38,8 +38,8 @@
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControlTables = new DevExpress.XtraGrid.GridControl();
+            this.gridViewTables = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTableName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,8 +52,8 @@
             this.colTableMovements = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTables)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTables)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -122,7 +122,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("brnDelete.ImageOptions.Image")));
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
             this.btnDelete.Location = new System.Drawing.Point(1019, 31);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 38);
@@ -160,20 +160,20 @@
             this.btnNew.Text = "Yeni";
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // gridControl1
+            // gridControlTables
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 22);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1189, 420);
-            this.gridControl1.TabIndex = 4;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridControlTables.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlTables.Location = new System.Drawing.Point(0, 22);
+            this.gridControlTables.MainView = this.gridViewTables;
+            this.gridControlTables.Name = "gridControlTables";
+            this.gridControlTables.Size = new System.Drawing.Size(1189, 420);
+            this.gridControlTables.TabIndex = 4;
+            this.gridControlTables.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewTables});
             // 
-            // gridView1
+            // gridViewTables
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewTables.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colTableName,
             this.colDescription,
@@ -184,9 +184,9 @@
             this.colProcess,
             this.colUserId,
             this.colTableMovements});
-            this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(973, 383, 264, 272);
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.gridViewTables.CustomizationFormBounds = new System.Drawing.Rectangle(973, 383, 264, 272);
+            this.gridViewTables.GridControl = this.gridControlTables;
+            this.gridViewTables.Name = "gridViewTables";
             // 
             // colId
             // 
@@ -280,7 +280,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 516);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gridControlTables);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.labelControl1);
             this.Name = "frmTables";
@@ -288,8 +288,8 @@
             this.Text = "Masalar";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTables)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTables)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,8 +303,8 @@
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnNew;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridControlTables;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewTables;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colTableName;
         private DevExpress.XtraGrid.Columns.GridColumn colDescription;

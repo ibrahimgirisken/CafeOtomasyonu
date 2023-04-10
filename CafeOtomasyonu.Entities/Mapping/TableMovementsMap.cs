@@ -16,7 +16,7 @@ namespace CafeOtomasyonu.Entities.Mapping
             this.ToTable("TableMovements");
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.SalesNumber).HasColumnType("varchar").HasMaxLength(15);
+            this.Property(p => p.SalesCode).HasColumnType("varchar").HasMaxLength(15);
             this.Property(p => p.Description).HasColumnType("varchar").HasMaxLength(300);
 
             this.HasRequired(x=>x.Tables).WithMany(x=>x.TableMovements).HasForeignKey(x=>x.TableId);

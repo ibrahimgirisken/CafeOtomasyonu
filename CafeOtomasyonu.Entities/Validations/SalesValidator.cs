@@ -12,7 +12,7 @@ namespace CafeOtomasyonu.Entities.Validations
     {
         public SalesValidator()
         {
-            RuleFor(p => p.SalesNumber).NotEmpty().WithMessage("Satış Kodu alanı boş geçilemez!");
+            RuleFor(p => p.SalesCode).NotEmpty().WithMessage("Satış Kodu alanı boş geçilemez!");
         }
     }
 }

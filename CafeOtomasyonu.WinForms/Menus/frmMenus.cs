@@ -21,20 +21,20 @@ namespace CafeOtomasyonu.WinForms.Menus
         {
             InitializeComponent();
             _context.Menu.Load();
-            gridControl1.DataSource = _context.Menu.Local.ToBindingList();
+            gridControlMenu.DataSource = _context.Menu.Local.ToBindingList();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             _context.SaveChanges();
-            gridView1.RefreshData();
+            gridViewMenu.RefreshData();
         }
 
         private void brnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(text:"Seçili olan menü silinsin mi?",caption:"Uyarı", MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
             {
-                gridView1.DeleteSelectedRows();
+                gridViewMenu.DeleteSelectedRows();
                 _context.SaveChanges();
             }
         }

@@ -10,11 +10,11 @@ namespace CafeOtomasyonu.Entities.Models
     public class TableMovements : IEntity
     {
         public int Id { get; set; }
-        public string SalesNumber { get; set; }
+        public string SalesCode { get; set; }
         public int TableId { get; set; }
         //public int MenuId { get; set; }
         public int ProductId { get; set; }
-        public int Amount { get; set; }
+        public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal DiscountTotal { get; set; }
         public string Description { get; set; }

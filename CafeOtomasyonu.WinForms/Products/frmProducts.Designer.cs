@@ -37,9 +37,9 @@
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridControlProducts = new DevExpress.XtraGrid.GridControl();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMenuId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProductNumber = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,9 +56,9 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -141,25 +141,25 @@
             this.btnNew.Text = "Yeni";
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // gridControl1
+            // gridControlProducts
             // 
-            this.gridControl1.DataSource = this.productBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 22);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(718, 363);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridControlProducts.DataSource = this.productBindingSource;
+            this.gridControlProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlProducts.Location = new System.Drawing.Point(0, 22);
+            this.gridControlProducts.MainView = this.gridViewProducts;
+            this.gridControlProducts.Name = "gridControlProducts";
+            this.gridControlProducts.Size = new System.Drawing.Size(718, 363);
+            this.gridControlProducts.TabIndex = 0;
+            this.gridControlProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewProducts});
             // 
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(CafeOtomasyonu.Entities.Models.Product);
             // 
-            // gridView1
+            // gridViewProducts
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colMenuId,
             this.colProductNumber,
@@ -172,8 +172,8 @@
             this.colDate,
             this.colMenu,
             this.colMenuName});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.gridViewProducts.GridControl = this.gridControlProducts;
+            this.gridViewProducts.Name = "gridViewProducts";
             // 
             // colId
             // 
@@ -292,7 +292,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 459);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gridControlProducts);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.labelControl1);
             this.Name = "frmProducts";
@@ -300,9 +300,9 @@
             this.Text = "Ürünler";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,8 +316,8 @@
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnNew;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridControlProducts;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewProducts;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colMenuId;
         private DevExpress.XtraGrid.Columns.GridColumn colProductNumber;

@@ -34,7 +34,7 @@
             this.btnRezerv = new DevExpress.XtraEditors.SimpleButton();
             this.btnTableOpen = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
-            this.btnOrders = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOrderAdd = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -47,7 +47,7 @@
             this.groupControl1.Controls.Add(this.btnRezerv);
             this.groupControl1.Controls.Add(this.btnTableOpen);
             this.groupControl1.Controls.Add(this.btnRefresh);
-            this.groupControl1.Controls.Add(this.btnOrders);
+            this.groupControl1.Controls.Add(this.btnOrderAdd);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 398);
             this.groupControl1.Name = "groupControl1";
@@ -75,6 +75,7 @@
             this.btnRezerv.Size = new System.Drawing.Size(95, 38);
             this.btnRezerv.TabIndex = 2;
             this.btnRezerv.Text = "Rezerv Et";
+            this.btnRezerv.Click += new System.EventHandler(this.btnRezerv_Click);
             // 
             // btnTableOpen
             // 
@@ -85,6 +86,7 @@
             this.btnTableOpen.Size = new System.Drawing.Size(95, 38);
             this.btnTableOpen.TabIndex = 2;
             this.btnTableOpen.Text = "Masa Aç";
+            this.btnTableOpen.Click += new System.EventHandler(this.btnTableOpen_Click);
             // 
             // btnRefresh
             // 
@@ -95,16 +97,16 @@
             this.btnRefresh.TabIndex = 2;
             this.btnRefresh.Text = "Yenile";
             // 
-            // btnOrders
+            // btnOrderAdd
             // 
-            this.btnOrders.Enabled = false;
-            this.btnOrders.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOrders.ImageOptions.Image")));
-            this.btnOrders.Location = new System.Drawing.Point(5, 31);
-            this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(95, 38);
-            this.btnOrders.TabIndex = 0;
-            this.btnOrders.Text = "Siparişler";
-            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
+            this.btnOrderAdd.Enabled = false;
+            this.btnOrderAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOrders.ImageOptions.Image")));
+            this.btnOrderAdd.Location = new System.Drawing.Point(5, 31);
+            this.btnOrderAdd.Name = "btnOrderAdd";
+            this.btnOrderAdd.Size = new System.Drawing.Size(95, 38);
+            this.btnOrderAdd.TabIndex = 0;
+            this.btnOrderAdd.Text = "Siparişler";
+            this.btnOrderAdd.Click += new System.EventHandler(this.btnOrderAdd_Click);
             // 
             // labelControl1
             // 
@@ -150,7 +152,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btnClose;
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
-        private DevExpress.XtraEditors.SimpleButton btnOrders;
+        private DevExpress.XtraEditors.SimpleButton btnOrderAdd;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnRezerv;
         private DevExpress.XtraEditors.SimpleButton btnTableOpen;

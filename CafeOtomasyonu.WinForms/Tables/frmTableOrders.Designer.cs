@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTableOrders));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnRezervTable = new DevExpress.XtraEditors.SimpleButton();
             this.btnNullTable = new DevExpress.XtraEditors.SimpleButton();
             this.btnFullTable = new DevExpress.XtraEditors.SimpleButton();
@@ -52,30 +51,49 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.calcTotal = new DevExpress.XtraEditors.CalcEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.calcDiscountedSum = new DevExpress.XtraEditors.CalcEdit();
+            this.calcDiscountTotal = new DevExpress.XtraEditors.CalcEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.calcRemainder = new DevExpress.XtraEditors.CalcEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnResponse = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.btnOrders = new DevExpress.XtraEditors.SimpleButton();
-            this.navigationTable = new DevExpress.XtraBars.Navigation.NavigationPane();
+            this.navigationPaymets = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.gridControlPayments = new DevExpress.XtraGrid.GridControl();
+            this.gridViewPayments = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colPaymentDelete = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryPaymentDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalesCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalesType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPaid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControlPayments = new DevExpress.XtraEditors.PanelControl();
+            this.btnCreditCard = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCache = new DevExpress.XtraEditors.SimpleButton();
             this.navigationOrders = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.gridControlOrders = new DevExpress.XtraGrid.GridControl();
             this.gridViewOrders = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colOrderDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryOrderDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalesCode1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTableId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProductId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDiscountTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescription1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTables = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProduct = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
             this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
             this.btnCustomerReset = new DevExpress.XtraEditors.SimpleButton();
@@ -85,15 +103,6 @@
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.navigationPage4 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.gridControl4 = new DevExpress.XtraGrid.GridControl();
-            this.paymentTransactionsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
@@ -104,6 +113,9 @@
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.navigationPage5 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.gridControl5 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView33 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -120,46 +132,29 @@
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl9 = new DevExpress.XtraEditors.PanelControl();
-            this.navigationPaymets = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.gridControlPayments = new DevExpress.XtraGrid.GridControl();
-            this.paymentTransactionsBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.gridViewPayments = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colPaymentDelete = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryPaymentDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.navigationTable = new DevExpress.XtraBars.Navigation.NavigationPane();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClosed = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOrderAdd = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panelControlPayments = new DevExpress.XtraEditors.PanelControl();
-            this.btnCreditCard = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCache = new DevExpress.XtraEditors.SimpleButton();
-            this.tableMovementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.paymentTransactionsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.paymentTransactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.paymentTransactionsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.paymentTransactionsBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calcDiscountedTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcPaid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcDiscountRate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcTotal.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcDiscountedSum.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcDiscountTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcRemainder.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.navigationTable)).BeginInit();
-            this.navigationTable.SuspendLayout();
+            this.navigationPaymets.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlPayments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPayments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryPaymentDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlPayments)).BeginInit();
+            this.panelControlPayments.SuspendLayout();
             this.navigationOrders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOrders)).BeginInit();
@@ -171,17 +166,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpCustomer.Properties)).BeginInit();
             this.navigationPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
-            this.navigationPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.panelControl8.SuspendLayout();
@@ -190,18 +184,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).BeginInit();
-            this.navigationPaymets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlPayments)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewPayments)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryPaymentDelete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControlPayments)).BeginInit();
-            this.panelControlPayments.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableMovementsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationTable)).BeginInit();
+            this.navigationTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRezervTable
@@ -250,11 +236,10 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.panelControl3);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 483);
+            this.panelControl1.Location = new System.Drawing.Point(0, 645);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1241, 57);
+            this.panelControl1.Size = new System.Drawing.Size(1241, 126);
             this.panelControl1.TabIndex = 0;
             // 
             // panelControl3
@@ -265,22 +250,21 @@
             this.panelControl3.Controls.Add(this.labelControl2);
             this.panelControl3.Controls.Add(this.calcTotal);
             this.panelControl3.Controls.Add(this.labelControl3);
-            this.panelControl3.Controls.Add(this.calcDiscountedSum);
+            this.panelControl3.Controls.Add(this.calcDiscountTotal);
             this.panelControl3.Controls.Add(this.labelControl4);
             this.panelControl3.Controls.Add(this.calcRemainder);
             this.panelControl3.Controls.Add(this.labelControl6);
             this.panelControl3.Controls.Add(this.labelControl5);
             this.panelControl3.Controls.Add(this.labelControl7);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(2, 8);
+            this.panelControl3.Location = new System.Drawing.Point(2, 511);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1237, 47);
+            this.panelControl3.Size = new System.Drawing.Size(1239, 47);
             this.panelControl3.TabIndex = 6;
             // 
             // calcDiscountedTotal
             // 
             this.calcDiscountedTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcDiscountedTotal.Location = new System.Drawing.Point(1096, 26);
+            this.calcDiscountedTotal.Location = new System.Drawing.Point(1098, 26);
             this.calcDiscountedTotal.Name = "calcDiscountedTotal";
             this.calcDiscountedTotal.Properties.Appearance.BackColor = System.Drawing.Color.Green;
             this.calcDiscountedTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,7 +305,7 @@
             // calcDiscountRate
             // 
             this.calcDiscountRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcDiscountRate.Location = new System.Drawing.Point(733, 23);
+            this.calcDiscountRate.Location = new System.Drawing.Point(735, 23);
             this.calcDiscountRate.Name = "calcDiscountRate";
             this.calcDiscountRate.Properties.Appearance.BackColor = System.Drawing.Color.Green;
             this.calcDiscountRate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -356,7 +340,7 @@
             // calcTotal
             // 
             this.calcTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcTotal.Location = new System.Drawing.Point(1096, -1);
+            this.calcTotal.Location = new System.Drawing.Point(1098, -1);
             this.calcTotal.Name = "calcTotal";
             this.calcTotal.Properties.Appearance.BackColor = System.Drawing.Color.Green;
             this.calcTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -388,26 +372,26 @@
             this.labelControl3.TabIndex = 12;
             this.labelControl3.Text = "Kalan:";
             // 
-            // calcDiscountedSum
+            // calcDiscountTotal
             // 
-            this.calcDiscountedSum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcDiscountedSum.Location = new System.Drawing.Point(733, -2);
-            this.calcDiscountedSum.Name = "calcDiscountedSum";
-            this.calcDiscountedSum.Properties.Appearance.BackColor = System.Drawing.Color.Green;
-            this.calcDiscountedSum.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calcDiscountedSum.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.calcDiscountedSum.Properties.Appearance.Options.UseBackColor = true;
-            this.calcDiscountedSum.Properties.Appearance.Options.UseFont = true;
-            this.calcDiscountedSum.Properties.Appearance.Options.UseForeColor = true;
-            this.calcDiscountedSum.Properties.Appearance.Options.UseTextOptions = true;
-            this.calcDiscountedSum.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.calcDiscountedSum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.calcDiscountTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcDiscountTotal.Location = new System.Drawing.Point(735, -2);
+            this.calcDiscountTotal.Name = "calcDiscountTotal";
+            this.calcDiscountTotal.Properties.Appearance.BackColor = System.Drawing.Color.Green;
+            this.calcDiscountTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calcDiscountTotal.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            this.calcDiscountTotal.Properties.Appearance.Options.UseBackColor = true;
+            this.calcDiscountTotal.Properties.Appearance.Options.UseFont = true;
+            this.calcDiscountTotal.Properties.Appearance.Options.UseForeColor = true;
+            this.calcDiscountTotal.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcDiscountTotal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.calcDiscountTotal.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcDiscountedSum.Properties.MaskSettings.Set("mask", "c");
-            this.calcDiscountedSum.Properties.NullText = "₺0,00";
-            this.calcDiscountedSum.Properties.UseMaskAsDisplayFormat = true;
-            this.calcDiscountedSum.Size = new System.Drawing.Size(137, 22);
-            this.calcDiscountedSum.TabIndex = 13;
+            this.calcDiscountTotal.Properties.MaskSettings.Set("mask", "c");
+            this.calcDiscountTotal.Properties.NullText = "₺0,00";
+            this.calcDiscountTotal.Properties.UseMaskAsDisplayFormat = true;
+            this.calcDiscountTotal.Size = new System.Drawing.Size(137, 22);
+            this.calcDiscountTotal.TabIndex = 13;
             // 
             // labelControl4
             // 
@@ -418,7 +402,7 @@
             this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl4.Location = new System.Drawing.Point(602, -2);
+            this.labelControl4.Location = new System.Drawing.Point(604, -2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(125, 22);
             this.labelControl4.TabIndex = 7;
@@ -453,7 +437,7 @@
             this.labelControl6.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl6.Location = new System.Drawing.Point(965, -1);
+            this.labelControl6.Location = new System.Drawing.Point(967, -1);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(125, 22);
             this.labelControl6.TabIndex = 8;
@@ -468,7 +452,7 @@
             this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl5.Location = new System.Drawing.Point(602, 23);
+            this.labelControl5.Location = new System.Drawing.Point(604, 23);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(125, 22);
             this.labelControl5.TabIndex = 9;
@@ -483,25 +467,11 @@
             this.labelControl7.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl7.Location = new System.Drawing.Point(965, 26);
+            this.labelControl7.Location = new System.Drawing.Point(967, 26);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(125, 22);
             this.labelControl7.TabIndex = 10;
             this.labelControl7.Text = "İndirimli Toplam:";
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.btnSave);
-            this.groupControl1.Controls.Add(this.btnResponse);
-            this.groupControl1.Controls.Add(this.btnClose);
-            this.groupControl1.Controls.Add(this.btnRefresh);
-            this.groupControl1.Controls.Add(this.btnOrders);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 540);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1241, 75);
-            this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "İşlemler";
             // 
             // btnSave
             // 
@@ -544,29 +514,144 @@
             // 
             // btnOrders
             // 
-            this.btnOrders.Enabled = false;
-            this.btnOrders.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOrders.ImageOptions.Image")));
-            this.btnOrders.Location = new System.Drawing.Point(5, 31);
+            this.btnOrders.Location = new System.Drawing.Point(0, 0);
             this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(95, 38);
+            this.btnOrders.Size = new System.Drawing.Size(75, 23);
             this.btnOrders.TabIndex = 0;
-            this.btnOrders.Text = "Sipariş Ekle";
             // 
-            // navigationTable
+            // navigationPaymets
             // 
-            this.navigationTable.Controls.Add(this.navigationOrders);
-            this.navigationTable.Controls.Add(this.navigationPaymets);
-            this.navigationTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationTable.Location = new System.Drawing.Point(0, 22);
-            this.navigationTable.Name = "navigationTable";
-            this.navigationTable.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.navigationOrders,
-            this.navigationPaymets});
-            this.navigationTable.RegularSize = new System.Drawing.Size(1241, 461);
-            this.navigationTable.SelectedPage = this.navigationOrders;
-            this.navigationTable.Size = new System.Drawing.Size(1241, 461);
-            this.navigationTable.TabIndex = 8;
-            this.navigationTable.Text = "navigationPane1";
+            this.navigationPaymets.Caption = "Ödemeler";
+            this.navigationPaymets.Controls.Add(this.gridControlPayments);
+            this.navigationPaymets.Controls.Add(this.panelControlPayments);
+            this.navigationPaymets.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPaymets.ImageOptions.Image")));
+            this.navigationPaymets.Name = "navigationPaymets";
+            this.navigationPaymets.Size = new System.Drawing.Size(1154, 325);
+            // 
+            // gridControlPayments
+            // 
+            this.gridControlPayments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlPayments.Location = new System.Drawing.Point(0, 0);
+            this.gridControlPayments.MainView = this.gridViewPayments;
+            this.gridControlPayments.Name = "gridControlPayments";
+            this.gridControlPayments.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryPaymentDelete});
+            this.gridControlPayments.Size = new System.Drawing.Size(1154, 274);
+            this.gridControlPayments.TabIndex = 5;
+            this.gridControlPayments.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewPayments});
+            // 
+            // gridViewPayments
+            // 
+            this.gridViewPayments.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colPaymentDelete,
+            this.colId,
+            this.colSalesCode,
+            this.colSalesType,
+            this.colPaid,
+            this.colDescription,
+            this.colDate});
+            this.gridViewPayments.GridControl = this.gridControlPayments;
+            this.gridViewPayments.Name = "gridViewPayments";
+            // 
+            // colPaymentDelete
+            // 
+            this.colPaymentDelete.Caption = "Sil";
+            this.colPaymentDelete.ColumnEdit = this.repositoryPaymentDelete;
+            this.colPaymentDelete.Name = "colPaymentDelete";
+            this.colPaymentDelete.Visible = true;
+            this.colPaymentDelete.VisibleIndex = 0;
+            this.colPaymentDelete.Width = 80;
+            // 
+            // repositoryPaymentDelete
+            // 
+            this.repositoryPaymentDelete.AutoHeight = false;
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            this.repositoryPaymentDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryPaymentDelete.Name = "repositoryPaymentDelete";
+            this.repositoryPaymentDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryPaymentDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryPaymentDelete_ButtonClick);
+            // 
+            // colId
+            // 
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
+            // colSalesCode
+            // 
+            this.colSalesCode.Caption = "Satış Kodu";
+            this.colSalesCode.FieldName = "SalesCode";
+            this.colSalesCode.Name = "colSalesCode";
+            this.colSalesCode.Width = 106;
+            // 
+            // colSalesType
+            // 
+            this.colSalesType.Caption = "Ödeme Türü";
+            this.colSalesType.FieldName = "SalesType";
+            this.colSalesType.Name = "colSalesType";
+            this.colSalesType.Visible = true;
+            this.colSalesType.VisibleIndex = 1;
+            this.colSalesType.Width = 233;
+            // 
+            // colPaid
+            // 
+            this.colPaid.Caption = "Ödenen Tutar";
+            this.colPaid.DisplayFormat.FormatString = "C2";
+            this.colPaid.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colPaid.FieldName = "Paid";
+            this.colPaid.Name = "colPaid";
+            this.colPaid.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Paid", "SUM={0:C2}")});
+            this.colPaid.Visible = true;
+            this.colPaid.VisibleIndex = 2;
+            this.colPaid.Width = 233;
+            // 
+            // colDescription
+            // 
+            this.colDescription.Caption = "Açıklama";
+            this.colDescription.FieldName = "Description";
+            this.colDescription.Name = "colDescription";
+            this.colDescription.Visible = true;
+            this.colDescription.VisibleIndex = 3;
+            this.colDescription.Width = 233;
+            // 
+            // colDate
+            // 
+            this.colDate.Caption = "Tarih";
+            this.colDate.FieldName = "Date";
+            this.colDate.Name = "colDate";
+            this.colDate.Visible = true;
+            this.colDate.VisibleIndex = 4;
+            this.colDate.Width = 244;
+            // 
+            // panelControlPayments
+            // 
+            this.panelControlPayments.Controls.Add(this.btnCreditCard);
+            this.panelControlPayments.Controls.Add(this.btnCache);
+            this.panelControlPayments.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControlPayments.Location = new System.Drawing.Point(0, 274);
+            this.panelControlPayments.Name = "panelControlPayments";
+            this.panelControlPayments.Size = new System.Drawing.Size(1154, 51);
+            this.panelControlPayments.TabIndex = 4;
+            // 
+            // btnCreditCard
+            // 
+            this.btnCreditCard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCreditCard.ImageOptions.Image")));
+            this.btnCreditCard.Location = new System.Drawing.Point(107, 6);
+            this.btnCreditCard.Name = "btnCreditCard";
+            this.btnCreditCard.Size = new System.Drawing.Size(96, 40);
+            this.btnCreditCard.TabIndex = 0;
+            this.btnCreditCard.Text = "Kredi Kartı";
+            // 
+            // btnCache
+            // 
+            this.btnCache.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCache.ImageOptions.Image")));
+            this.btnCache.Location = new System.Drawing.Point(5, 6);
+            this.btnCache.Name = "btnCache";
+            this.btnCache.Size = new System.Drawing.Size(96, 40);
+            this.btnCache.TabIndex = 0;
+            this.btnCache.Text = "Nakit";
             // 
             // navigationOrders
             // 
@@ -576,18 +661,18 @@
             this.navigationOrders.Controls.Add(this.navigationPage4);
             this.navigationOrders.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationOrders.ImageOptions.Image")));
             this.navigationOrders.Name = "navigationOrders";
-            this.navigationOrders.Size = new System.Drawing.Size(1154, 388);
+            this.navigationOrders.Size = new System.Drawing.Size(1154, 325);
             // 
             // gridControlOrders
             // 
-            this.gridControlOrders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gridControlOrders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControlOrders.Location = new System.Drawing.Point(0, 87);
             this.gridControlOrders.MainView = this.gridViewOrders;
             this.gridControlOrders.Name = "gridControlOrders";
             this.gridControlOrders.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryOrderDelete});
-            this.gridControlOrders.Size = new System.Drawing.Size(1154, 298);
-            this.gridControlOrders.TabIndex = 43;
+            this.gridControlOrders.Size = new System.Drawing.Size(1154, 238);
+            this.gridControlOrders.TabIndex = 52;
             this.gridControlOrders.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOrders});
             // 
@@ -595,14 +680,22 @@
             // 
             this.gridViewOrders.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colOrderDelete,
-            this.gridColumn36,
-            this.gridColumn37,
-            this.gridColumn38,
-            this.gridColumn39,
-            this.gridColumn40,
-            this.gridColumn41});
+            this.colProductName,
+            this.colId1,
+            this.colSalesCode1,
+            this.colTableId,
+            this.colProductId,
+            this.colQuantity,
+            this.colUnitPrice,
+            this.colDiscountTotal,
+            this.colAmount,
+            this.colDescription1,
+            this.colDate1,
+            this.colTables,
+            this.colProduct});
             this.gridViewOrders.GridControl = this.gridControlOrders;
             this.gridViewOrders.Name = "gridViewOrders";
+            this.gridViewOrders.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewOrders_RowCellStyle_1);
             // 
             // colOrderDelete
             // 
@@ -611,69 +704,128 @@
             this.colOrderDelete.Name = "colOrderDelete";
             this.colOrderDelete.Visible = true;
             this.colOrderDelete.VisibleIndex = 0;
-            this.colOrderDelete.Width = 56;
             // 
             // repositoryOrderDelete
             // 
             this.repositoryOrderDelete.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
             this.repositoryOrderDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryOrderDelete.Name = "repositoryOrderDelete";
             this.repositoryOrderDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryOrderDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryOrderDelete_ButtonClick);
             // 
-            // gridColumn36
+            // colProductName
             // 
-            this.gridColumn36.FieldName = "Id";
-            this.gridColumn36.Name = "gridColumn36";
-            this.gridColumn36.Visible = true;
-            this.gridColumn36.VisibleIndex = 1;
-            this.gridColumn36.Width = 47;
+            this.colProductName.Caption = "Ürün Adı";
+            this.colProductName.FieldName = "Product.ProductName";
+            this.colProductName.Name = "colProductName";
+            this.colProductName.Visible = true;
+            this.colProductName.VisibleIndex = 1;
             // 
-            // gridColumn37
+            // colId1
             // 
-            this.gridColumn37.Caption = "Satış Numarası";
-            this.gridColumn37.FieldName = "SalesNumber";
-            this.gridColumn37.Name = "gridColumn37";
-            this.gridColumn37.Visible = true;
-            this.gridColumn37.VisibleIndex = 2;
-            this.gridColumn37.Width = 96;
+            this.colId1.Caption = "Id";
+            this.colId1.FieldName = "Id";
+            this.colId1.Name = "colId1";
+            this.colId1.Visible = true;
+            this.colId1.VisibleIndex = 2;
             // 
-            // gridColumn38
+            // colSalesCode1
             // 
-            this.gridColumn38.Caption = "Ödenen";
-            this.gridColumn38.FieldName = "Paid";
-            this.gridColumn38.Name = "gridColumn38";
-            this.gridColumn38.Visible = true;
-            this.gridColumn38.VisibleIndex = 4;
+            this.colSalesCode1.Caption = "Satış Kodu";
+            this.colSalesCode1.FieldName = "SalesCode";
+            this.colSalesCode1.Name = "colSalesCode1";
+            this.colSalesCode1.Visible = true;
+            this.colSalesCode1.VisibleIndex = 3;
             // 
-            // gridColumn39
+            // colTableId
             // 
-            this.gridColumn39.Caption = "Satış Tipi";
-            this.gridColumn39.FieldName = "SalesType";
-            this.gridColumn39.Name = "gridColumn39";
-            this.gridColumn39.Visible = true;
-            this.gridColumn39.VisibleIndex = 3;
-            this.gridColumn39.Width = 138;
+            this.colTableId.FieldName = "TableId";
+            this.colTableId.Name = "colTableId";
+            this.colTableId.Visible = true;
+            this.colTableId.VisibleIndex = 4;
             // 
-            // gridColumn40
+            // colProductId
             // 
-            this.gridColumn40.Caption = "Açıklama";
-            this.gridColumn40.FieldName = "Description";
-            this.gridColumn40.Name = "gridColumn40";
-            this.gridColumn40.Visible = true;
-            this.gridColumn40.VisibleIndex = 5;
-            this.gridColumn40.Width = 288;
+            this.colProductId.FieldName = "ProductId";
+            this.colProductId.Name = "colProductId";
+            this.colProductId.Visible = true;
+            this.colProductId.VisibleIndex = 5;
             // 
-            // gridColumn41
+            // colQuantity
             // 
-            this.gridColumn41.Caption = "Tarih";
-            this.gridColumn41.FieldName = "Date";
-            this.gridColumn41.Name = "gridColumn41";
-            this.gridColumn41.Visible = true;
-            this.gridColumn41.VisibleIndex = 6;
-            this.gridColumn41.Width = 298;
+            this.colQuantity.Caption = "Miktar";
+            this.colQuantity.FieldName = "Quantity";
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.Visible = true;
+            this.colQuantity.VisibleIndex = 6;
+            // 
+            // colUnitPrice
+            // 
+            this.colUnitPrice.Caption = "Birim Fiyatı";
+            this.colUnitPrice.DisplayFormat.FormatString = "C2";
+            this.colUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colUnitPrice.FieldName = "UnitPrice";
+            this.colUnitPrice.Name = "colUnitPrice";
+            this.colUnitPrice.Visible = true;
+            this.colUnitPrice.VisibleIndex = 7;
+            // 
+            // colDiscountTotal
+            // 
+            this.colDiscountTotal.Caption = "İndirim Tutarı";
+            this.colDiscountTotal.DisplayFormat.FormatString = "C2";
+            this.colDiscountTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colDiscountTotal.FieldName = "DiscountTotal";
+            this.colDiscountTotal.Name = "colDiscountTotal";
+            this.colDiscountTotal.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "DiscountTotal", "SUM={0:C2}")});
+            this.colDiscountTotal.Visible = true;
+            this.colDiscountTotal.VisibleIndex = 8;
+            // 
+            // colAmount
+            // 
+            this.colAmount.Caption = "Tutar";
+            this.colAmount.DisplayFormat.FormatString = "C2";
+            this.colAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colAmount.FieldName = "colAmount";
+            this.colAmount.Name = "colAmount";
+            this.colAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colAmount", "SUM={0:C2}")});
+            this.colAmount.UnboundDataType = typeof(decimal);
+            this.colAmount.UnboundExpression = "[Quantity] * [UnitPrice] - [DiscountTotal]";
+            this.colAmount.Visible = true;
+            this.colAmount.VisibleIndex = 13;
+            // 
+            // colDescription1
+            // 
+            this.colDescription1.Caption = "Açıklama";
+            this.colDescription1.FieldName = "Description";
+            this.colDescription1.Name = "colDescription1";
+            this.colDescription1.Visible = true;
+            this.colDescription1.VisibleIndex = 9;
+            // 
+            // colDate1
+            // 
+            this.colDate1.Caption = "Tarih";
+            this.colDate1.FieldName = "Date";
+            this.colDate1.Name = "colDate1";
+            this.colDate1.Visible = true;
+            this.colDate1.VisibleIndex = 10;
+            // 
+            // colTables
+            // 
+            this.colTables.FieldName = "Tables";
+            this.colTables.Name = "colTables";
+            this.colTables.Visible = true;
+            this.colTables.VisibleIndex = 11;
+            // 
+            // colProduct
+            // 
+            this.colProduct.FieldName = "Product";
+            this.colProduct.Name = "colProduct";
+            this.colProduct.Visible = true;
+            this.colProduct.VisibleIndex = 12;
             // 
             // panelControl10
             // 
@@ -784,91 +936,10 @@
             // navigationPage4
             // 
             this.navigationPage4.Caption = "navigationPage4";
-            this.navigationPage4.Controls.Add(this.gridControl4);
             this.navigationPage4.Controls.Add(this.panelControl7);
             this.navigationPage4.Controls.Add(this.navigationPage5);
             this.navigationPage4.Name = "navigationPage4";
             this.navigationPage4.Size = new System.Drawing.Size(1106, 388);
-            // 
-            // gridControl4
-            // 
-            this.gridControl4.DataSource = this.paymentTransactionsBindingSource2;
-            this.gridControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl4.Location = new System.Drawing.Point(0, 87);
-            this.gridControl4.MainView = this.gridView4;
-            this.gridControl4.Name = "gridControl4";
-            this.gridControl4.Size = new System.Drawing.Size(1106, 259);
-            this.gridControl4.TabIndex = 35;
-            this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView4});
-            // 
-            // paymentTransactionsBindingSource2
-            // 
-            this.paymentTransactionsBindingSource2.DataSource = typeof(CafeOtomasyonu.Entities.Models.PaymentTransactions);
-            // 
-            // gridView4
-            // 
-            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn24,
-            this.gridColumn25,
-            this.gridColumn26,
-            this.gridColumn27,
-            this.gridColumn28,
-            this.gridColumn29});
-            this.gridView4.GridControl = this.gridControl4;
-            this.gridView4.Name = "gridView4";
-            // 
-            // gridColumn24
-            // 
-            this.gridColumn24.FieldName = "Id";
-            this.gridColumn24.Name = "gridColumn24";
-            this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 0;
-            this.gridColumn24.Width = 47;
-            // 
-            // gridColumn25
-            // 
-            this.gridColumn25.Caption = "Satış Numarası";
-            this.gridColumn25.FieldName = "SalesNumber";
-            this.gridColumn25.Name = "gridColumn25";
-            this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 1;
-            this.gridColumn25.Width = 96;
-            // 
-            // gridColumn26
-            // 
-            this.gridColumn26.Caption = "Ödenen";
-            this.gridColumn26.FieldName = "Paid";
-            this.gridColumn26.Name = "gridColumn26";
-            this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 3;
-            // 
-            // gridColumn27
-            // 
-            this.gridColumn27.Caption = "Satış Tipi";
-            this.gridColumn27.FieldName = "SalesType";
-            this.gridColumn27.Name = "gridColumn27";
-            this.gridColumn27.Visible = true;
-            this.gridColumn27.VisibleIndex = 2;
-            this.gridColumn27.Width = 138;
-            // 
-            // gridColumn28
-            // 
-            this.gridColumn28.Caption = "Açıklama";
-            this.gridColumn28.FieldName = "Description";
-            this.gridColumn28.Name = "gridColumn28";
-            this.gridColumn28.Visible = true;
-            this.gridColumn28.VisibleIndex = 4;
-            this.gridColumn28.Width = 288;
-            // 
-            // gridColumn29
-            // 
-            this.gridColumn29.Caption = "Tarih";
-            this.gridColumn29.FieldName = "Date";
-            this.gridColumn29.Name = "gridColumn29";
-            this.gridColumn29.Visible = true;
-            this.gridColumn29.VisibleIndex = 5;
-            this.gridColumn29.Width = 298;
             // 
             // panelControl7
             // 
@@ -971,36 +1042,38 @@
             // 
             // navigationPage5
             // 
-            this.navigationPage5.Caption = "Ödemeler";
-            this.navigationPage5.Controls.Add(this.gridControl5);
-            this.navigationPage5.Controls.Add(this.panelControl8);
-            this.navigationPage5.Controls.Add(this.panelControl9);
-            this.navigationPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPage5.ImageOptions.Image")));
+            this.navigationPage5.Caption = "navigationPage5";
             this.navigationPage5.Name = "navigationPage5";
-            this.navigationPage5.Size = new System.Drawing.Size(1106, 388);
+            this.navigationPage5.Size = new System.Drawing.Size(200, 100);
             // 
             // gridControl5
             // 
-            this.gridControl5.DataSource = this.paymentTransactionsBindingSource2;
-            this.gridControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl5.Location = new System.Drawing.Point(0, 87);
-            this.gridControl5.MainView = this.gridView5;
+            this.gridControl5.Location = new System.Drawing.Point(0, 0);
+            this.gridControl5.MainView = this.gridView2;
             this.gridControl5.Name = "gridControl5";
-            this.gridControl5.Size = new System.Drawing.Size(1106, 259);
-            this.gridControl5.TabIndex = 5;
+            this.gridControl5.Size = new System.Drawing.Size(400, 200);
+            this.gridControl5.TabIndex = 0;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView5});
+            this.gridView2,
+            this.gridView33});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.gridControl5;
+            this.gridView2.Name = "gridView2";
+            // 
+            // gridView33
+            // 
+            this.gridView33.GridControl = this.gridControl5;
+            this.gridView33.Name = "gridView33";
+            this.gridView33.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewOrders_RowCellStyle);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Name = "gridView1";
             // 
             // gridView5
             // 
-            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn30,
-            this.gridColumn31,
-            this.gridColumn32,
-            this.gridColumn33,
-            this.gridColumn34,
-            this.gridColumn35});
-            this.gridView5.GridControl = this.gridControl5;
             this.gridView5.Name = "gridView5";
             // 
             // gridColumn30
@@ -1162,237 +1235,119 @@
             this.panelControl9.Size = new System.Drawing.Size(1106, 10);
             this.panelControl9.TabIndex = 4;
             // 
-            // navigationPaymets
+            // navigationTable
             // 
-            this.navigationPaymets.Caption = "Ödemeler";
-            this.navigationPaymets.Controls.Add(this.gridControlPayments);
-            this.navigationPaymets.Controls.Add(this.panelControlPayments);
-            this.navigationPaymets.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPaymets.ImageOptions.Image")));
-            this.navigationPaymets.Name = "navigationPaymets";
-            this.navigationPaymets.Size = new System.Drawing.Size(1154, 388);
+            this.navigationTable.Controls.Add(this.navigationOrders);
+            this.navigationTable.Controls.Add(this.navigationPaymets);
+            this.navigationTable.Location = new System.Drawing.Point(2, 47);
+            this.navigationTable.Name = "navigationTable";
+            this.navigationTable.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.navigationOrders,
+            this.navigationPaymets});
+            this.navigationTable.RegularSize = new System.Drawing.Size(1241, 398);
+            this.navigationTable.SelectedPage = this.navigationOrders;
+            this.navigationTable.Size = new System.Drawing.Size(1241, 398);
+            this.navigationTable.TabIndex = 8;
+            this.navigationTable.Text = "navigationPane1";
             // 
-            // gridControlPayments
+            // groupControl1
             // 
-            this.gridControlPayments.DataSource = this.paymentTransactionsBindingSource5;
-            this.gridControlPayments.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlPayments.Location = new System.Drawing.Point(0, 0);
-            this.gridControlPayments.MainView = this.gridViewPayments;
-            this.gridControlPayments.Name = "gridControlPayments";
-            this.gridControlPayments.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryPaymentDelete});
-            this.gridControlPayments.Size = new System.Drawing.Size(1154, 337);
-            this.gridControlPayments.TabIndex = 6;
-            this.gridControlPayments.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewPayments});
+            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.simpleButton3);
+            this.groupControl1.Controls.Add(this.btnClosed);
+            this.groupControl1.Controls.Add(this.simpleButton6);
+            this.groupControl1.Controls.Add(this.btnOrderAdd);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl1.Location = new System.Drawing.Point(0, 570);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(1241, 75);
+            this.groupControl1.TabIndex = 9;
+            this.groupControl1.Text = "İşlemler";
             // 
-            // paymentTransactionsBindingSource5
+            // simpleButton1
             // 
-            this.paymentTransactionsBindingSource5.DataSource = typeof(CafeOtomasyonu.Entities.Models.PaymentTransactions);
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(207, 31);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(95, 38);
+            this.simpleButton1.TabIndex = 2;
+            this.simpleButton1.Text = "Kaydet";
             // 
-            // gridViewPayments
+            // simpleButton3
             // 
-            this.gridViewPayments.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colPaymentDelete,
-            this.gridColumn42,
-            this.gridColumn43,
-            this.gridColumn44,
-            this.gridColumn45,
-            this.gridColumn46,
-            this.gridColumn47,
-            this.gridColumn48,
-            this.gridColumn49,
-            this.gridColumn50,
-            this.gridColumn51,
-            this.gridColumn52,
-            this.gridColumn1});
-            this.gridViewPayments.GridControl = this.gridControlPayments;
-            this.gridViewPayments.Name = "gridViewPayments";
+            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(1039, 31);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(95, 38);
+            this.simpleButton3.TabIndex = 2;
+            this.simpleButton3.Text = "Sonuçlandır";
             // 
-            // colPaymentDelete
+            // btnClosed
             // 
-            this.colPaymentDelete.Caption = "Sil";
-            this.colPaymentDelete.ColumnEdit = this.repositoryPaymentDelete;
-            this.colPaymentDelete.Name = "colPaymentDelete";
-            this.colPaymentDelete.Visible = true;
-            this.colPaymentDelete.VisibleIndex = 0;
-            this.colPaymentDelete.Width = 56;
+            this.btnClosed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClosed.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClosed.ImageOptions.Image")));
+            this.btnClosed.Location = new System.Drawing.Point(1140, 31);
+            this.btnClosed.Name = "btnClosed";
+            this.btnClosed.Size = new System.Drawing.Size(95, 38);
+            this.btnClosed.TabIndex = 2;
+            this.btnClosed.Text = "Kapat";
+            this.btnClosed.Click += new System.EventHandler(this.btnClosed_Click);
             // 
-            // repositoryPaymentDelete
+            // simpleButton6
             // 
-            this.repositoryPaymentDelete.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
-            this.repositoryPaymentDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryPaymentDelete.Name = "repositoryPaymentDelete";
-            this.repositoryPaymentDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repositoryPaymentDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryPaymentDelete_ButtonClick);
+            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.simpleButton6.Location = new System.Drawing.Point(106, 31);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(95, 38);
+            this.simpleButton6.TabIndex = 1;
+            this.simpleButton6.Text = "Yenile";
             // 
-            // gridColumn42
+            // btnOrderAdd
             // 
-            this.gridColumn42.FieldName = "Id";
-            this.gridColumn42.Name = "gridColumn42";
-            this.gridColumn42.Visible = true;
-            this.gridColumn42.VisibleIndex = 1;
-            this.gridColumn42.Width = 37;
-            // 
-            // gridColumn43
-            // 
-            this.gridColumn43.FieldName = "SalesNumber";
-            this.gridColumn43.Name = "gridColumn43";
-            this.gridColumn43.Visible = true;
-            this.gridColumn43.VisibleIndex = 2;
-            this.gridColumn43.Width = 78;
-            // 
-            // gridColumn44
-            // 
-            this.gridColumn44.FieldName = "TableId";
-            this.gridColumn44.Name = "gridColumn44";
-            this.gridColumn44.Visible = true;
-            this.gridColumn44.VisibleIndex = 3;
-            this.gridColumn44.Width = 88;
-            // 
-            // gridColumn45
-            // 
-            this.gridColumn45.FieldName = "ProductId";
-            this.gridColumn45.Name = "gridColumn45";
-            this.gridColumn45.Visible = true;
-            this.gridColumn45.VisibleIndex = 4;
-            this.gridColumn45.Width = 91;
-            // 
-            // gridColumn46
-            // 
-            this.gridColumn46.FieldName = "Amount";
-            this.gridColumn46.Name = "gridColumn46";
-            this.gridColumn46.Visible = true;
-            this.gridColumn46.VisibleIndex = 5;
-            this.gridColumn46.Width = 89;
-            // 
-            // gridColumn47
-            // 
-            this.gridColumn47.FieldName = "UnitPrice";
-            this.gridColumn47.Name = "gridColumn47";
-            this.gridColumn47.Visible = true;
-            this.gridColumn47.VisibleIndex = 6;
-            this.gridColumn47.Width = 94;
-            // 
-            // gridColumn48
-            // 
-            this.gridColumn48.FieldName = "DiscountTotal";
-            this.gridColumn48.Name = "gridColumn48";
-            this.gridColumn48.Visible = true;
-            this.gridColumn48.VisibleIndex = 7;
-            this.gridColumn48.Width = 78;
-            // 
-            // gridColumn49
-            // 
-            this.gridColumn49.FieldName = "Description";
-            this.gridColumn49.Name = "gridColumn49";
-            this.gridColumn49.Visible = true;
-            this.gridColumn49.VisibleIndex = 8;
-            this.gridColumn49.Width = 226;
-            // 
-            // gridColumn50
-            // 
-            this.gridColumn50.FieldName = "Date";
-            this.gridColumn50.Name = "gridColumn50";
-            this.gridColumn50.Visible = true;
-            this.gridColumn50.VisibleIndex = 9;
-            this.gridColumn50.Width = 86;
-            // 
-            // gridColumn51
-            // 
-            this.gridColumn51.FieldName = "Tables";
-            this.gridColumn51.Name = "gridColumn51";
-            // 
-            // gridColumn52
-            // 
-            this.gridColumn52.FieldName = "Product";
-            this.gridColumn52.Name = "gridColumn52";
+            this.btnOrderAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOrderAdd.ImageOptions.Image")));
+            this.btnOrderAdd.Location = new System.Drawing.Point(5, 31);
+            this.btnOrderAdd.Name = "btnOrderAdd";
+            this.btnOrderAdd.Size = new System.Drawing.Size(95, 38);
+            this.btnOrderAdd.TabIndex = 0;
+            this.btnOrderAdd.Text = "Sipariş Ekle";
+            this.btnOrderAdd.Click += new System.EventHandler(this.btnOrderAdd_Click);
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "gridColumn1";
             this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 10;
-            // 
-            // panelControlPayments
-            // 
-            this.panelControlPayments.Controls.Add(this.btnCreditCard);
-            this.panelControlPayments.Controls.Add(this.btnCache);
-            this.panelControlPayments.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControlPayments.Location = new System.Drawing.Point(0, 337);
-            this.panelControlPayments.Name = "panelControlPayments";
-            this.panelControlPayments.Size = new System.Drawing.Size(1154, 51);
-            this.panelControlPayments.TabIndex = 4;
-            // 
-            // btnCreditCard
-            // 
-            this.btnCreditCard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCreditCard.ImageOptions.Image")));
-            this.btnCreditCard.Location = new System.Drawing.Point(107, 6);
-            this.btnCreditCard.Name = "btnCreditCard";
-            this.btnCreditCard.Size = new System.Drawing.Size(96, 40);
-            this.btnCreditCard.TabIndex = 0;
-            this.btnCreditCard.Text = "Kredi Kartı";
-            // 
-            // btnCache
-            // 
-            this.btnCache.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCache.ImageOptions.Image")));
-            this.btnCache.Location = new System.Drawing.Point(5, 6);
-            this.btnCache.Name = "btnCache";
-            this.btnCache.Size = new System.Drawing.Size(96, 40);
-            this.btnCache.TabIndex = 0;
-            this.btnCache.Text = "Nakit";
-            // 
-            // tableMovementsBindingSource
-            // 
-            this.tableMovementsBindingSource.DataSource = typeof(CafeOtomasyonu.Entities.Models.TableMovements);
-            // 
-            // paymentTransactionsBindingSource1
-            // 
-            this.paymentTransactionsBindingSource1.DataSource = typeof(CafeOtomasyonu.Entities.Models.PaymentTransactions);
-            // 
-            // paymentTransactionsBindingSource
-            // 
-            this.paymentTransactionsBindingSource.DataSource = typeof(CafeOtomasyonu.Entities.Models.PaymentTransactions);
-            // 
-            // paymentTransactionsBindingSource3
-            // 
-            this.paymentTransactionsBindingSource3.DataSource = typeof(CafeOtomasyonu.Entities.Models.PaymentTransactions);
-            // 
-            // paymentTransactionsBindingSource4
-            // 
-            this.paymentTransactionsBindingSource4.DataSource = typeof(CafeOtomasyonu.Entities.Models.PaymentTransactions);
             // 
             // frmTableOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 615);
+            this.ClientSize = new System.Drawing.Size(1241, 771);
+            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.navigationTable);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnRezervTable);
             this.Controls.Add(this.btnNullTable);
             this.Controls.Add(this.btnFullTable);
-            this.Controls.Add(this.groupControl1);
             this.Name = "frmTableOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Masa Siparişleri";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.calcDiscountedTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcPaid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcDiscountRate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcTotal.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcDiscountedSum.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcDiscountTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcRemainder.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.navigationTable)).EndInit();
-            this.navigationTable.ResumeLayout(false);
+            this.navigationPaymets.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlPayments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPayments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryPaymentDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlPayments)).EndInit();
+            this.panelControlPayments.ResumeLayout(false);
             this.navigationOrders.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOrders)).EndInit();
@@ -1404,17 +1359,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpCustomer.Properties)).EndInit();
             this.navigationPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
-            this.navigationPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
             this.panelControl8.ResumeLayout(false);
@@ -1423,18 +1377,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).EndInit();
-            this.navigationPaymets.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlPayments)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewPayments)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryPaymentDelete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControlPayments)).EndInit();
-            this.panelControlPayments.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tableMovementsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentTransactionsBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationTable)).EndInit();
+            this.navigationTable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1446,20 +1392,11 @@
         private DevExpress.XtraEditors.SimpleButton btnFullTable;
         private DevExpress.XtraEditors.LabelControl lblTitle;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btnClose;
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private DevExpress.XtraEditors.SimpleButton btnOrders;
-        private DevExpress.XtraBars.Navigation.NavigationPane navigationTable;
-        private DevExpress.XtraBars.Navigation.NavigationPage navigationOrders;
-        private DevExpress.XtraBars.Navigation.NavigationPage navigationPaymets;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnResponse;
-        private DevExpress.XtraEditors.PanelControl panelControlPayments;
-        private System.Windows.Forms.BindingSource tableMovementsBindingSource;
-        private System.Windows.Forms.BindingSource paymentTransactionsBindingSource;
-        private System.Windows.Forms.BindingSource paymentTransactionsBindingSource1;
-        private System.Windows.Forms.BindingSource paymentTransactionsBindingSource2;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.CalcEdit calcDiscountedTotal;
         private DevExpress.XtraEditors.CalcEdit calcPaid;
@@ -1467,20 +1404,17 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.CalcEdit calcTotal;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.CalcEdit calcDiscountedSum;
+        private DevExpress.XtraEditors.CalcEdit calcDiscountTotal;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.CalcEdit calcRemainder;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraGrid.GridControl gridControlOrders;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewOrders;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPaymets;
+        private DevExpress.XtraEditors.PanelControl panelControlPayments;
+        private DevExpress.XtraEditors.SimpleButton btnCreditCard;
+        private DevExpress.XtraEditors.SimpleButton btnCache;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationOrders;
         private DevExpress.XtraEditors.PanelControl panelControl10;
         private DevExpress.XtraEditors.MemoEdit txtDescription;
         private DevExpress.XtraEditors.SimpleButton btnCustomerReset;
@@ -1490,14 +1424,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl24;
         private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage4;
-        private DevExpress.XtraGrid.GridControl gridControl4;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.MemoEdit memoEdit2;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
@@ -1524,28 +1450,43 @@
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.PanelControl panelControl9;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView33;
+        private DevExpress.XtraBars.Navigation.NavigationPane navigationTable;
         private DevExpress.XtraGrid.GridControl gridControlPayments;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewPayments;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn50;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn51;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
-        private DevExpress.XtraEditors.SimpleButton btnCreditCard;
-        private DevExpress.XtraEditors.SimpleButton btnCache;
-        private System.Windows.Forms.BindingSource paymentTransactionsBindingSource3;
-        private DevExpress.XtraGrid.Columns.GridColumn colOrderDelete;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryOrderDelete;
-        private System.Windows.Forms.BindingSource paymentTransactionsBindingSource4;
-        private System.Windows.Forms.BindingSource paymentTransactionsBindingSource5;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalesCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalesType;
+        private DevExpress.XtraGrid.Columns.GridColumn colPaid;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn colDate;
         private DevExpress.XtraGrid.Columns.GridColumn colPaymentDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryPaymentDelete;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnClosed;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton btnOrderAdd;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.GridControl gridControlOrders;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewOrders;
+        private DevExpress.XtraGrid.Columns.GridColumn colId1;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalesCode1;
+        private DevExpress.XtraGrid.Columns.GridColumn colTableId;
+        private DevExpress.XtraGrid.Columns.GridColumn colProductId;
+        private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn colUnitPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colDiscountTotal;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescription1;
+        private DevExpress.XtraGrid.Columns.GridColumn colDate1;
+        private DevExpress.XtraGrid.Columns.GridColumn colTables;
+        private DevExpress.XtraGrid.Columns.GridColumn colProduct;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrderDelete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryOrderDelete;
+        private DevExpress.XtraGrid.Columns.GridColumn colAmount;
+        private DevExpress.XtraGrid.Columns.GridColumn colProductName;
     }
 }

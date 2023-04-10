@@ -12,10 +12,10 @@ namespace CafeOtomasyonu.Entities.Validations
     {
         public TableMovementsValidator()
         {
-            RuleFor(p => p.SalesNumber).NotEmpty().WithMessage("Satış Kodu alanı boş geçilemez!");
-            RuleFor(p => p.SalesNumber).Length(12).WithMessage("Satış Kodu 12 karakter olmalıdır!");
-            RuleFor(p => p.Amount).NotEmpty().WithMessage("Miktar alanı boş geçilemez");
-            RuleFor(p => p.Amount).GreaterThan(0).WithMessage("Miktar alanı boş geçilemez!");
+            RuleFor(p => p.SalesCode).NotEmpty().WithMessage("Satış Kodu alanı boş geçilemez!");
+            //RuleFor(p => p.SalesCode).Length(12).WithMessage("Satış Kodu 12 karakter olmalıdır!");
+            RuleFor(p => p.Quantity).NotEmpty().WithMessage("Miktar alanı boş geçilemez");
+            RuleFor(p => p.Quantity).GreaterThan(0).WithMessage("Miktar alanı boş geçilemez!");
             RuleFor(p => p.UnitPrice).NotEmpty().WithMessage("Birim Fiyatı alanı boş geçilemez!");
         }
     }

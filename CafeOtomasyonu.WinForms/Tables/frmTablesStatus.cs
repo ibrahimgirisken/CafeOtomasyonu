@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
 
 namespace CafeOtomasyonu.WinForms.Tables
@@ -17,8 +18,10 @@ namespace CafeOtomasyonu.WinForms.Tables
         private CafeContext _context = new CafeContext();
         private CheckButton btnSender;
         private OrderCode modelOrderCode;
-        private object _orderCode;
+        private string _orderCode;
         private int _tableId;
+        private Entities.Models.Tables _tables;
+        private TablesDal _tablaDal = new TablesDal();
         public frmTablesStatus()
         {
             InitializeComponent();
@@ -27,6 +30,8 @@ namespace CafeOtomasyonu.WinForms.Tables
         }
         public void getTables()
         {
+            flowLayoutPanel1.Controls.Clear();
+            _context = new CafeContext();
             var model = _context.Tables.ToList();
             for (int i = 0; i < model.Count; i++)
             {
@@ -55,13 +60,14 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         public void StatusRefresh()
         {
-            btnOrders.Enabled = false;
+            btnOrderAdd.Enabled = false;
             btnTableOpen.Enabled = false;
             btnRezerv.Enabled = false;
         }
         private void Btn_Click(object sender, EventArgs e)
         {
             btnSender = sender as CheckButton;
+            _tableId = Convert.ToInt32(btnSender.Name);
             StatusRefresh();
             if (btnSender.Appearance.BackColor == Color.Yellow)
             {
@@ -75,7 +81,7 @@ namespace CafeOtomasyonu.WinForms.Tables
             }
             else if (btnSender.Appearance.BackColor == Color.Red)
             {
-                btnOrders.Enabled = true;
+                btnOrderAdd.Enabled = true;
             }
         }
 
@@ -84,11 +90,41 @@ namespace CafeOtomasyonu.WinForms.Tables
             this.Close();
         }
 
-        private void btnOrders_Click(object sender, EventArgs e)
+        private void btnTableOpen_Click(object sender, EventArgs e)
         {
-            _tableId = Convert.ToInt32(btnSender.Name);
-            frmTableOrders frm = new frmTableOrders(tableId:_tableId,tableName:btnSender.Text);
+            if (MessageBox.Show(btnSender.Text + " açılsın mı?", "Bilgi", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                _tables = _tablaDal.GetByFilter(_context, t => t.Id == _tableId);
+                _tables.OrderCode = modelOrderCode.OrderDefinition + modelOrderCode.Number;
+                _tables.Status = true;
+                modelOrderCode.Number++;
+                _tablaDal.Save((_context));
+                btnSender = null;
+                StatusRefresh();
+                getTables();
+            }
+        }
+
+        private void btnRezerv_Click(object sender, EventArgs e)
+        {
+            frmTableRezerv frm = new frmTableRezerv(_tableId);
             frm.ShowDialog();
+            StatusRefresh();
+            if (frm._operationIsDone)
+            {
+                getTables();
+            }
+            btnSender = null;
+        }
+
+        private void btnOrderAdd_Click(object sender, EventArgs e)
+        {
+            _orderCode = btnSender.Tag.ToString();
+            frmTableOrders frm = new frmTableOrders(tableId: _tableId, tableName: btnSender.Text, salesCode: _orderCode);
+            frm.ShowDialog();
+            btnSender = null;
+            StatusRefresh();
+            getTables();
         }
     }
 }

@@ -25,7 +25,7 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         private void tableList()
         {
-            gridControl1.DataSource = _tablesDal.tablesList(_context);
+            gridControlTables.DataSource = _tablesDal.tablesList(_context);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            int selectId = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+            int selectId = Convert.ToInt32(gridViewTables.GetFocusedRowCellValue(colId));
             var tables = _tablesDal.GetByFilter(_context,t=>t.Id==selectId);
             frmTableAdd frm = new frmTableAdd(tables);
             frm.ShowDialog();
@@ -57,9 +57,9 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         private void btnStatusReplace_Click(object sender, EventArgs e)
         {
-            if (gridView1.SelectedRowsCount>0)
+            if (gridViewTables.SelectedRowsCount>0)
             {
-                int selectId = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+                int selectId = Convert.ToInt32(gridViewTables.GetFocusedRowCellValue(colId));
                 var tables = _tablesDal.GetByFilter(_context, t => t.Id == selectId);
                 if (tables.Status)
                 {
@@ -76,9 +76,9 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         private void btnRezervReplace_Click(object sender, EventArgs e)
         {
-            if (gridView1.SelectedRowsCount > 0)
+            if (gridViewTables.SelectedRowsCount > 0)
             {
-                int selectId = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+                int selectId = Convert.ToInt32(gridViewTables.GetFocusedRowCellValue(colId));
                 var tables = _tablesDal.GetByFilter(_context, t => t.Id == selectId);
                 if (tables.Rezerv)
                 {
@@ -101,7 +101,7 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int selectId = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+            int selectId = Convert.ToInt32(gridViewTables.GetFocusedRowCellValue(colId));
             if (MessageBox.Show("Seçili kayıt silinecek onaylıyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 _tablesDal.Delete(_context, p => p.Id == selectId);

@@ -10,7 +10,7 @@ namespace CafeOtomasyonu.Entities.Models
     public class PaymentTransactions:IEntity
     {
         public int Id { get; set; }
-        public string SalesNumber { get; set; }
+        public string SalesCode { get; set; }
         public string SalesType { get; set; }
         public decimal Paid { get; set; }
         public string Description { get; set; }
