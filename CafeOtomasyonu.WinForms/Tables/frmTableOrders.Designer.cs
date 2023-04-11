@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTableOrders));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnRezervTable = new DevExpress.XtraEditors.SimpleButton();
             this.btnNullTable = new DevExpress.XtraEditors.SimpleButton();
             this.btnFullTable = new DevExpress.XtraEditors.SimpleButton();
@@ -57,11 +57,7 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnResponse = new DevExpress.XtraEditors.SimpleButton();
-            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
-            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
-            this.btnOrders = new DevExpress.XtraEditors.SimpleButton();
             this.navigationPaymets = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.gridControlPayments = new DevExpress.XtraGrid.GridControl();
             this.gridViewPayments = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -75,7 +71,7 @@
             this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControlPayments = new DevExpress.XtraEditors.PanelControl();
             this.btnCreditCard = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCache = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCash = new DevExpress.XtraEditors.SimpleButton();
             this.navigationOrders = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.gridControlOrders = new DevExpress.XtraGrid.GridControl();
             this.gridViewOrders = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -112,9 +108,6 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.navigationPage5 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.gridControl5 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView33 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -134,10 +127,10 @@
             this.panelControl9 = new DevExpress.XtraEditors.PanelControl();
             this.navigationTable = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnClosed = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.btnOrderAdd = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -172,9 +165,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
@@ -473,15 +463,6 @@
             this.labelControl7.TabIndex = 10;
             this.labelControl7.Text = "İndirimli Toplam:";
             // 
-            // btnSave
-            // 
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(207, 31);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(95, 38);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Kaydet";
-            // 
             // btnResponse
             // 
             this.btnResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -492,33 +473,6 @@
             this.btnResponse.TabIndex = 2;
             this.btnResponse.Text = "Sonuçlandır";
             // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1140, 31);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(95, 38);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.Text = "Kapat";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(106, 31);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(95, 38);
-            this.btnRefresh.TabIndex = 1;
-            this.btnRefresh.Text = "Yenile";
-            // 
-            // btnOrders
-            // 
-            this.btnOrders.Location = new System.Drawing.Point(0, 0);
-            this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(75, 23);
-            this.btnOrders.TabIndex = 0;
-            // 
             // navigationPaymets
             // 
             this.navigationPaymets.Caption = "Ödemeler";
@@ -526,7 +480,7 @@
             this.navigationPaymets.Controls.Add(this.panelControlPayments);
             this.navigationPaymets.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPaymets.ImageOptions.Image")));
             this.navigationPaymets.Name = "navigationPaymets";
-            this.navigationPaymets.Size = new System.Drawing.Size(1154, 325);
+            this.navigationPaymets.Size = new System.Drawing.Size(1154, 334);
             // 
             // gridControlPayments
             // 
@@ -536,7 +490,7 @@
             this.gridControlPayments.Name = "gridControlPayments";
             this.gridControlPayments.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryPaymentDelete});
-            this.gridControlPayments.Size = new System.Drawing.Size(1154, 274);
+            this.gridControlPayments.Size = new System.Drawing.Size(1154, 283);
             this.gridControlPayments.TabIndex = 5;
             this.gridControlPayments.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPayments});
@@ -553,6 +507,7 @@
             this.colDate});
             this.gridViewPayments.GridControl = this.gridControlPayments;
             this.gridViewPayments.Name = "gridViewPayments";
+            this.gridViewPayments.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewPayments_RowCellStyle);
             // 
             // colPaymentDelete
             // 
@@ -566,9 +521,9 @@
             // repositoryPaymentDelete
             // 
             this.repositoryPaymentDelete.AutoHeight = false;
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.repositoryPaymentDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryPaymentDelete.Name = "repositoryPaymentDelete";
             this.repositoryPaymentDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryPaymentDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryPaymentDelete_ButtonClick);
@@ -577,12 +532,14 @@
             // 
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
+            this.colId.OptionsColumn.AllowEdit = false;
             // 
             // colSalesCode
             // 
             this.colSalesCode.Caption = "Satış Kodu";
             this.colSalesCode.FieldName = "SalesCode";
             this.colSalesCode.Name = "colSalesCode";
+            this.colSalesCode.OptionsColumn.AllowEdit = false;
             this.colSalesCode.Width = 106;
             // 
             // colSalesType
@@ -628,9 +585,9 @@
             // panelControlPayments
             // 
             this.panelControlPayments.Controls.Add(this.btnCreditCard);
-            this.panelControlPayments.Controls.Add(this.btnCache);
+            this.panelControlPayments.Controls.Add(this.btnCash);
             this.panelControlPayments.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControlPayments.Location = new System.Drawing.Point(0, 274);
+            this.panelControlPayments.Location = new System.Drawing.Point(0, 283);
             this.panelControlPayments.Name = "panelControlPayments";
             this.panelControlPayments.Size = new System.Drawing.Size(1154, 51);
             this.panelControlPayments.TabIndex = 4;
@@ -638,20 +595,22 @@
             // btnCreditCard
             // 
             this.btnCreditCard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCreditCard.ImageOptions.Image")));
-            this.btnCreditCard.Location = new System.Drawing.Point(107, 6);
+            this.btnCreditCard.Location = new System.Drawing.Point(123, 6);
             this.btnCreditCard.Name = "btnCreditCard";
-            this.btnCreditCard.Size = new System.Drawing.Size(96, 40);
+            this.btnCreditCard.Size = new System.Drawing.Size(112, 40);
             this.btnCreditCard.TabIndex = 0;
             this.btnCreditCard.Text = "Kredi Kartı";
+            this.btnCreditCard.Click += new System.EventHandler(this.payment_Click);
             // 
-            // btnCache
+            // btnCash
             // 
-            this.btnCache.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCache.ImageOptions.Image")));
-            this.btnCache.Location = new System.Drawing.Point(5, 6);
-            this.btnCache.Name = "btnCache";
-            this.btnCache.Size = new System.Drawing.Size(96, 40);
-            this.btnCache.TabIndex = 0;
-            this.btnCache.Text = "Nakit";
+            this.btnCash.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCash.ImageOptions.Image")));
+            this.btnCash.Location = new System.Drawing.Point(5, 6);
+            this.btnCash.Name = "btnCash";
+            this.btnCash.Size = new System.Drawing.Size(112, 40);
+            this.btnCash.TabIndex = 0;
+            this.btnCash.Text = "Nakit Ödeme";
+            this.btnCash.Click += new System.EventHandler(this.payment_Click);
             // 
             // navigationOrders
             // 
@@ -661,7 +620,7 @@
             this.navigationOrders.Controls.Add(this.navigationPage4);
             this.navigationOrders.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationOrders.ImageOptions.Image")));
             this.navigationOrders.Name = "navigationOrders";
-            this.navigationOrders.Size = new System.Drawing.Size(1154, 325);
+            this.navigationOrders.Size = new System.Drawing.Size(1154, 334);
             // 
             // gridControlOrders
             // 
@@ -671,7 +630,7 @@
             this.gridControlOrders.Name = "gridControlOrders";
             this.gridControlOrders.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryOrderDelete});
-            this.gridControlOrders.Size = new System.Drawing.Size(1154, 238);
+            this.gridControlOrders.Size = new System.Drawing.Size(1154, 247);
             this.gridControlOrders.TabIndex = 52;
             this.gridControlOrders.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOrders});
@@ -695,7 +654,7 @@
             this.colProduct});
             this.gridViewOrders.GridControl = this.gridControlOrders;
             this.gridViewOrders.Name = "gridViewOrders";
-            this.gridViewOrders.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewOrders_RowCellStyle_1);
+            this.gridViewOrders.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewOrders_RowCellStyle);
             // 
             // colOrderDelete
             // 
@@ -704,13 +663,14 @@
             this.colOrderDelete.Name = "colOrderDelete";
             this.colOrderDelete.Visible = true;
             this.colOrderDelete.VisibleIndex = 0;
+            this.colOrderDelete.Width = 43;
             // 
             // repositoryOrderDelete
             // 
             this.repositoryOrderDelete.AutoHeight = false;
-            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.repositoryOrderDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryOrderDelete.Name = "repositoryOrderDelete";
             this.repositoryOrderDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryOrderDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryOrderDelete_ButtonClick);
@@ -720,38 +680,36 @@
             this.colProductName.Caption = "Ürün Adı";
             this.colProductName.FieldName = "Product.ProductName";
             this.colProductName.Name = "colProductName";
+            this.colProductName.OptionsColumn.AllowEdit = false;
             this.colProductName.Visible = true;
             this.colProductName.VisibleIndex = 1;
+            this.colProductName.Width = 154;
             // 
             // colId1
             // 
             this.colId1.Caption = "Id";
             this.colId1.FieldName = "Id";
             this.colId1.Name = "colId1";
-            this.colId1.Visible = true;
-            this.colId1.VisibleIndex = 2;
+            this.colId1.OptionsColumn.AllowEdit = false;
             // 
             // colSalesCode1
             // 
             this.colSalesCode1.Caption = "Satış Kodu";
             this.colSalesCode1.FieldName = "SalesCode";
             this.colSalesCode1.Name = "colSalesCode1";
-            this.colSalesCode1.Visible = true;
-            this.colSalesCode1.VisibleIndex = 3;
+            this.colSalesCode1.OptionsColumn.AllowEdit = false;
             // 
             // colTableId
             // 
             this.colTableId.FieldName = "TableId";
             this.colTableId.Name = "colTableId";
-            this.colTableId.Visible = true;
-            this.colTableId.VisibleIndex = 4;
+            this.colTableId.OptionsColumn.AllowEdit = false;
             // 
             // colProductId
             // 
             this.colProductId.FieldName = "ProductId";
             this.colProductId.Name = "colProductId";
-            this.colProductId.Visible = true;
-            this.colProductId.VisibleIndex = 5;
+            this.colProductId.OptionsColumn.AllowEdit = false;
             // 
             // colQuantity
             // 
@@ -759,7 +717,8 @@
             this.colQuantity.FieldName = "Quantity";
             this.colQuantity.Name = "colQuantity";
             this.colQuantity.Visible = true;
-            this.colQuantity.VisibleIndex = 6;
+            this.colQuantity.VisibleIndex = 2;
+            this.colQuantity.Width = 74;
             // 
             // colUnitPrice
             // 
@@ -769,7 +728,8 @@
             this.colUnitPrice.FieldName = "UnitPrice";
             this.colUnitPrice.Name = "colUnitPrice";
             this.colUnitPrice.Visible = true;
-            this.colUnitPrice.VisibleIndex = 7;
+            this.colUnitPrice.VisibleIndex = 3;
+            this.colUnitPrice.Width = 104;
             // 
             // colDiscountTotal
             // 
@@ -781,7 +741,8 @@
             this.colDiscountTotal.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "DiscountTotal", "SUM={0:C2}")});
             this.colDiscountTotal.Visible = true;
-            this.colDiscountTotal.VisibleIndex = 8;
+            this.colDiscountTotal.VisibleIndex = 4;
+            this.colDiscountTotal.Width = 106;
             // 
             // colAmount
             // 
@@ -790,12 +751,14 @@
             this.colAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAmount.FieldName = "colAmount";
             this.colAmount.Name = "colAmount";
+            this.colAmount.OptionsColumn.AllowEdit = false;
             this.colAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colAmount", "SUM={0:C2}")});
             this.colAmount.UnboundDataType = typeof(decimal);
             this.colAmount.UnboundExpression = "[Quantity] * [UnitPrice] - [DiscountTotal]";
             this.colAmount.Visible = true;
-            this.colAmount.VisibleIndex = 13;
+            this.colAmount.VisibleIndex = 5;
+            this.colAmount.Width = 102;
             // 
             // colDescription1
             // 
@@ -803,7 +766,8 @@
             this.colDescription1.FieldName = "Description";
             this.colDescription1.Name = "colDescription1";
             this.colDescription1.Visible = true;
-            this.colDescription1.VisibleIndex = 9;
+            this.colDescription1.VisibleIndex = 6;
+            this.colDescription1.Width = 401;
             // 
             // colDate1
             // 
@@ -811,21 +775,18 @@
             this.colDate1.FieldName = "Date";
             this.colDate1.Name = "colDate1";
             this.colDate1.Visible = true;
-            this.colDate1.VisibleIndex = 10;
+            this.colDate1.VisibleIndex = 7;
+            this.colDate1.Width = 145;
             // 
             // colTables
             // 
             this.colTables.FieldName = "Tables";
             this.colTables.Name = "colTables";
-            this.colTables.Visible = true;
-            this.colTables.VisibleIndex = 11;
             // 
             // colProduct
             // 
             this.colProduct.FieldName = "Product";
             this.colProduct.Name = "colProduct";
-            this.colProduct.Visible = true;
-            this.colProduct.VisibleIndex = 12;
             // 
             // panelControl10
             // 
@@ -1046,28 +1007,6 @@
             this.navigationPage5.Name = "navigationPage5";
             this.navigationPage5.Size = new System.Drawing.Size(200, 100);
             // 
-            // gridControl5
-            // 
-            this.gridControl5.Location = new System.Drawing.Point(0, 0);
-            this.gridControl5.MainView = this.gridView2;
-            this.gridControl5.Name = "gridControl5";
-            this.gridControl5.Size = new System.Drawing.Size(400, 200);
-            this.gridControl5.TabIndex = 0;
-            this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2,
-            this.gridView33});
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.gridControl5;
-            this.gridView2.Name = "gridView2";
-            // 
-            // gridView33
-            // 
-            this.gridView33.GridControl = this.gridControl5;
-            this.gridView33.Name = "gridView33";
-            this.gridView33.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewOrders_RowCellStyle);
-            // 
             // gridView1
             // 
             this.gridView1.Name = "gridView1";
@@ -1241,6 +1180,8 @@
             this.navigationTable.Controls.Add(this.navigationPaymets);
             this.navigationTable.Location = new System.Drawing.Point(2, 47);
             this.navigationTable.Name = "navigationTable";
+            this.navigationTable.PageProperties.ShowCollapseButton = false;
+            this.navigationTable.PageProperties.ShowExpandButton = false;
             this.navigationTable.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationOrders,
             this.navigationPaymets});
@@ -1252,10 +1193,10 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.btnSave);
             this.groupControl1.Controls.Add(this.simpleButton3);
-            this.groupControl1.Controls.Add(this.btnClosed);
-            this.groupControl1.Controls.Add(this.simpleButton6);
+            this.groupControl1.Controls.Add(this.btnClose);
+            this.groupControl1.Controls.Add(this.btnRefresh);
             this.groupControl1.Controls.Add(this.btnOrderAdd);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 570);
@@ -1264,14 +1205,15 @@
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "İşlemler";
             // 
-            // simpleButton1
+            // btnSave
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(207, 31);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(95, 38);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Kaydet";
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.Location = new System.Drawing.Point(207, 31);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(95, 38);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Kaydet";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // simpleButton3
             // 
@@ -1283,25 +1225,26 @@
             this.simpleButton3.TabIndex = 2;
             this.simpleButton3.Text = "Sonuçlandır";
             // 
-            // btnClosed
+            // btnClose
             // 
-            this.btnClosed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClosed.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClosed.ImageOptions.Image")));
-            this.btnClosed.Location = new System.Drawing.Point(1140, 31);
-            this.btnClosed.Name = "btnClosed";
-            this.btnClosed.Size = new System.Drawing.Size(95, 38);
-            this.btnClosed.TabIndex = 2;
-            this.btnClosed.Text = "Kapat";
-            this.btnClosed.Click += new System.EventHandler(this.btnClosed_Click);
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.Location = new System.Drawing.Point(1140, 31);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(95, 38);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Text = "Kapat";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // simpleButton6
+            // btnRefresh
             // 
-            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
-            this.simpleButton6.Location = new System.Drawing.Point(106, 31);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(95, 38);
-            this.simpleButton6.TabIndex = 1;
-            this.simpleButton6.Text = "Yenile";
+            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(106, 31);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(95, 38);
+            this.btnRefresh.TabIndex = 1;
+            this.btnRefresh.Text = "Yenile";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnOrderAdd
             // 
@@ -1365,9 +1308,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
@@ -1392,10 +1332,6 @@
         private DevExpress.XtraEditors.SimpleButton btnFullTable;
         private DevExpress.XtraEditors.LabelControl lblTitle;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnClose;
-        private DevExpress.XtraEditors.SimpleButton btnRefresh;
-        private DevExpress.XtraEditors.SimpleButton btnOrders;
-        private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnResponse;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.CalcEdit calcDiscountedTotal;
@@ -1413,7 +1349,7 @@
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPaymets;
         private DevExpress.XtraEditors.PanelControl panelControlPayments;
         private DevExpress.XtraEditors.SimpleButton btnCreditCard;
-        private DevExpress.XtraEditors.SimpleButton btnCache;
+        private DevExpress.XtraEditors.SimpleButton btnCash;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationOrders;
         private DevExpress.XtraEditors.PanelControl panelControl10;
         private DevExpress.XtraEditors.MemoEdit txtDescription;
@@ -1433,7 +1369,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage5;
-        private DevExpress.XtraGrid.GridControl gridControl5;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
@@ -1450,7 +1385,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.PanelControl panelControl9;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView33;
         private DevExpress.XtraBars.Navigation.NavigationPane navigationTable;
         private DevExpress.XtraGrid.GridControl gridControlPayments;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewPayments;
@@ -1463,12 +1397,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPaymentDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryPaymentDelete;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton btnClosed;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton btnClose;
+        private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private DevExpress.XtraEditors.SimpleButton btnOrderAdd;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.GridControl gridControlOrders;

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
+using CafeOtomasyonu.WinForms.Payments;
 using CafeOtomasyonu.WinForms.Products;
 
 namespace CafeOtomasyonu.WinForms.Tables
@@ -20,6 +21,7 @@ namespace CafeOtomasyonu.WinForms.Tables
         private CafeContext _context = new CafeContext();
         private CustomersDal _customersDal = new CustomersDal();
         private TablesMovementsDal _tablesMovementsDal = new TablesMovementsDal();
+        private PaymentTransactionsDal _paymentTransactionsDal;
         private int? _tableId = null;
         private string _salesCode = null;
 
@@ -46,10 +48,6 @@ namespace CafeOtomasyonu.WinForms.Tables
             lookUpCustomer.EditValue = null;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
 
         void Calculate()
@@ -75,20 +73,6 @@ namespace CafeOtomasyonu.WinForms.Tables
             }
         }
 
-        private void gridViewOrders_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            Calculate();
-        }
-
-        private void btnOrder_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnClosed_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void repositoryPaymentDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
@@ -114,8 +98,8 @@ namespace CafeOtomasyonu.WinForms.Tables
                     Quantity = 1,
                     UnitPrice = frm._product.UnitPrice1,
                     DiscountTotal = 0,
-                    Description = "",
-                    Date = DateTime.Now
+                    Description = txtDescription.Text,
+                    Date =DateTime.Now
                 };
 
                 _tablesMovementsDal.AddOrUpdate(_context, _entity);
@@ -123,6 +107,48 @@ namespace CafeOtomasyonu.WinForms.Tables
         }
 
         private void gridViewOrders_RowCellStyle_1(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            Calculate();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            _context.SaveChanges();
+        }
+
+
+        private void payment_Click(object sender, EventArgs e)
+        {
+            var btn = sender as SimpleButton;
+            frmPayment frm = new frmPayment(_salesCode, btn.Text);
+            frm.ShowDialog();
+            _paymentTransactionsDal = new PaymentTransactionsDal();
+            if (frm._saved)
+            {
+                if (_paymentTransactionsDal.AddOrUpdate(_context, frm._paymentTransactions))
+                {
+                    gridViewOrders.RefreshData();
+                    Calculate();
+                }
+            }
+        }
+
+        private void gridViewOrders_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            Calculate();
+        }
+
+        private void gridViewPayments_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
             Calculate();
         }
