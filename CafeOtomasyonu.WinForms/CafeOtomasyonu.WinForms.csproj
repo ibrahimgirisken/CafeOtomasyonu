@@ -104,6 +104,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Payments\frmPaymentTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmPaymentTransactions.Designer.cs">
+      <DependentUpon>frmPaymentTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tables\frmTableAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +193,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Payments\frmPaymentTransactions.resx">
+      <DependentUpon>frmPaymentTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tables\frmTableAdd.resx">
       <DependentUpon>frmTableAdd.cs</DependentUpon>
     </EmbeddedResource>

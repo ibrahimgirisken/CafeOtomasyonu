@@ -39,6 +39,7 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.dateDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
+            this.btnRemainder = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calcAmount.Properties)).BeginInit();
@@ -75,7 +76,7 @@
             // btnConfirm
             // 
             this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnConfirm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.ImageOptions.Image")));
             this.btnConfirm.Location = new System.Drawing.Point(135, 31);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(95, 38);
@@ -111,7 +112,7 @@
             this.calcAmount.Properties.MaskSettings.Set("mask", "c");
             this.calcAmount.Properties.NullText = "₺0,00";
             this.calcAmount.Properties.UseMaskAsDisplayFormat = true;
-            this.calcAmount.Size = new System.Drawing.Size(177, 22);
+            this.calcAmount.Size = new System.Drawing.Size(147, 22);
             this.calcAmount.TabIndex = 16;
             // 
             // labelControl2
@@ -177,11 +178,21 @@
             this.labelControl24.TabIndex = 29;
             this.labelControl24.Text = "Tarih:";
             // 
+            // btnRemainder
+            // 
+            this.btnRemainder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnRemainder.Location = new System.Drawing.Point(296, 49);
+            this.btnRemainder.Name = "btnRemainder";
+            this.btnRemainder.Size = new System.Drawing.Size(24, 23);
+            this.btnRemainder.TabIndex = 31;
+            this.btnRemainder.Click += new System.EventHandler(this.btnRemainder_Click);
+            // 
             // frmPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 302);
+            this.Controls.Add(this.btnRemainder);
             this.Controls.Add(this.dateDate);
             this.Controls.Add(this.labelControl24);
             this.Controls.Add(this.txtDescription);
@@ -215,5 +226,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.DateEdit dateDate;
         private DevExpress.XtraEditors.LabelControl labelControl24;
+        private DevExpress.XtraEditors.SimpleButton btnRemainder;
     }
 }

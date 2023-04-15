@@ -13,6 +13,7 @@ using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
 using CafeOtomasyonu.WinForms.Payments;
 using CafeOtomasyonu.WinForms.Products;
+using DevExpress.Accessibility;
 
 namespace CafeOtomasyonu.WinForms.Tables
 {
@@ -24,12 +25,19 @@ namespace CafeOtomasyonu.WinForms.Tables
         private PaymentTransactionsDal _paymentTransactionsDal;
         private int? _tableId = null;
         private string _salesCode = null;
+        private Entities.Models.Sales _sales;
+        private SalesDal _salesDal = new SalesDal();
+        private Entities.Models.Tables _tables;
+        private TablesDal _tablesDal = new TablesDal();
+        ProductDal _productDal = new ProductDal();
+        private bool _packageOrder = false;
 
-        public frmTableOrders(int? tableId = null, string tableName = null, string salesCode = null)
+        public frmTableOrders(int? tableId = null, string tableName = null, string salesCode = null, bool packageOrder = false)
         {
             InitializeComponent();
             _tableId = tableId;
             _salesCode = salesCode;
+            _packageOrder = packageOrder;
             _context.TableMovements.Where(t => t.SalesCode == _salesCode).Load();
             _context.PaymentTransactions.Where(p => p.SalesCode == _salesCode).Load();
             _context.Product.Load();
@@ -39,7 +47,20 @@ namespace CafeOtomasyonu.WinForms.Tables
             if (_tableId != null)
             {
                 lblTitle.Text = tableName + " Siparişleri";
+                _tables = _tablesDal.GetByFilter(_context, t => t.Id == _tableId);
             }
+            else if (_tableId == null)
+            {
+                lblTitle.Text = "Paket Siparişi veya Veresiye İşlemleri";
+            }
+            _sales = _salesDal.GetByFilter(_context, p => p.SalesCode == _salesCode);
+            if (_sales != null)
+            {
+                lookUpCustomer.EditValue = _sales.CustomerId;
+                txtDescription.Text = _sales.Description;
+                dateDate.Text = _sales.EndProcessDate.ToString("dd.MM.yyyy");
+            }
+
         }
 
 
@@ -76,11 +97,20 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         private void repositoryPaymentDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-
+            if (MessageBox.Show("Seçili sipariş silinsin mi?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                gridViewPayments.DeleteSelectedRows();
+                Calculate();
+            }
         }
 
         private void repositoryOrderDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            if (MessageBox.Show("Seçili ödeme silinsin mi?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                gridViewOrders.DeleteSelectedRows();
+                Calculate();
+            }
 
         }
 
@@ -93,27 +123,22 @@ namespace CafeOtomasyonu.WinForms.Tables
                 TableMovements _entity = new TableMovements
                 {
                     SalesCode = _salesCode,
-                    TableId = Convert.ToInt32(_tableId),
+                    TableId = _tableId,
                     ProductId = frm._product.Id,
                     Quantity = 1,
                     UnitPrice = frm._product.UnitPrice1,
                     DiscountTotal = 0,
                     Description = txtDescription.Text,
-                    Date =DateTime.Now
+                    Date = DateTime.Now
                 };
 
                 _tablesMovementsDal.AddOrUpdate(_context, _entity);
             }
         }
 
-        private void gridViewOrders_RowCellStyle_1(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            Calculate();
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            this.Close();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -123,22 +148,55 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _context.SaveChanges();
+            if (gridViewOrders.RowCount > 0)
+            {
+                if (dateDate.EditValue != null)
+                {
+                    if (_sales == null)
+                    {
+                        _sales = new Entities.Models.Sales();
+                        _sales.SalesCode = _salesCode;
+                    }
+
+                    _sales.CustomerId = (int?)lookUpCustomer.EditValue;
+                    _sales.Description = txtDescription.Text;
+                    _sales.EndProcessDate = Convert.ToDateTime(dateDate.EditValue);
+                    _sales.Remainder = calcRemainder.Value;
+                    _sales.Paid = calcPaid.Value;
+                    _sales.Amount = calcTotal.Value;
+                    _sales.DiscountTotal = calcDiscountTotal.Value;
+                    _sales.PackageOrder = _packageOrder;
+                    _salesDal.AddOrUpdate(_context, _sales);
+                    _context.SaveChanges();
+                }
+                else
+                {
+                    MessageBox.Show("Tarih girilmesi gerekir!", "Uyarı");
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Herhangi bir kayıt bulunamadı", "Uyarı");
+            }
         }
 
 
         private void payment_Click(object sender, EventArgs e)
         {
-            var btn = sender as SimpleButton;
-            frmPayment frm = new frmPayment(_salesCode, btn.Text);
-            frm.ShowDialog();
-            _paymentTransactionsDal = new PaymentTransactionsDal();
-            if (frm._saved)
+            if (gridViewOrders.RowCount > 0)
             {
-                if (_paymentTransactionsDal.AddOrUpdate(_context, frm._paymentTransactions))
+                var btn = sender as SimpleButton;
+                frmPayment frm = new frmPayment(_salesCode, btn.Text, calcRemainder.Value);
+                frm.ShowDialog();
+                _paymentTransactionsDal = new PaymentTransactionsDal();
+                if (frm._saved)
                 {
-                    gridViewOrders.RefreshData();
-                    Calculate();
+                    if (_paymentTransactionsDal.AddOrUpdate(_context, frm._paymentTransactions))
+                    {
+                        gridViewOrders.RefreshData();
+                        Calculate();
+                    }
                 }
             }
         }
@@ -151,6 +209,62 @@ namespace CafeOtomasyonu.WinForms.Tables
         private void gridViewPayments_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
             Calculate();
+        }
+
+        private void btnResult_Click(object sender, EventArgs e)
+        {
+            if (_tableId != null)
+            {
+                if (calcRemainder.Value > 0)
+                {
+                    if (MessageBox.Show("Bu işlemi onaylarsanız müşteriye borç işlemi kayıt edilecektir!", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        if (_sales != null)
+                        {
+                            if (_sales.CustomerId == null)
+                            {
+                                MessageBox.Show("Önce müşteri seçimi yapınız!", "Uyarı");
+                            }
+                            else
+                            {
+                                ResultMethod();
+                                this.Close();
+                            }
+                        }
+                    }
+
+                }
+                else if (calcRemainder.Value == 0)
+                {
+                    ResultMethod();
+                    this.Close();
+                }
+            }
+        }
+
+        private void ResultMethod()
+        {
+            _tables.OrderCode = null;
+            _tables.Status = false;
+            _tables.Process = null;
+            _tables.UserId = null;
+            _tablesDal.AddOrUpdate(_context, _tables);
+            _tablesDal.Save(_context);
+        }
+
+        private void repositoryFiyat_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int productId = Convert.ToInt32(gridViewOrders.GetFocusedRowCellValue(colProductId));
+            var model = _productDal.GetByFilter(_context, p => p.Id == productId);
+            barFiyat1.Caption = model.UnitPrice1.ToString();
+            barFiyat2.Caption = model.UnitPrice2.ToString();
+            barFiyat3.Caption = model.UnitPrice3.ToString();
+            radialMenu1.ShowPopup(MousePosition);
+        }
+
+        private void Prices(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            gridViewOrders.SetFocusedRowCellValue(colUnitPrice, e.Item.Caption);
         }
     }
 }

@@ -97,11 +97,14 @@ namespace CafeOtomasyonu.WinForms.Tables
                 _tables = _tablaDal.GetByFilter(_context, t => t.Id == _tableId);
                 _tables.OrderCode = modelOrderCode.OrderDefinition + modelOrderCode.Number;
                 _tables.Status = true;
-                modelOrderCode.Number++;
+                _tables.Rezerv = false;
+                var increaseNumber = _context.OrderCodes.First();
+                increaseNumber.Number++;
                 _tablaDal.Save((_context));
                 btnSender = null;
                 StatusRefresh();
                 getTables();
+                modelOrderCode = _context.OrderCodes.First();
             }
         }
 
