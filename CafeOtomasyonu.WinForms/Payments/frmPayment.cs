@@ -19,12 +19,12 @@ namespace CafeOtomasyonu.WinForms.Payments
         public PaymentTransactions _paymentTransactions;
         public bool _saved;
         public decimal _remainder;
-        public frmPayment(string orderCode,string orderType, decimal remainder)
+        public frmPayment(string orderCode, string orderType, decimal remainder)
         {
             InitializeComponent();
             _salesCode = orderCode;
             _salesType = orderType;
-            _remainder=remainder;
+            _remainder = remainder;
             if (_salesType == "Nakit Ödeme")
             {
                 lblTitle.Text = "Nakit Ödeme";
@@ -39,13 +39,18 @@ namespace CafeOtomasyonu.WinForms.Payments
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            if (dateDate.EditValue == null)
+            {
+                dateDate.EditValue = DateTime.Now;
+            }
             _paymentTransactions = new PaymentTransactions
             {
                 SalesCode = _salesCode,
                 SalesType = _salesType,
                 Description = txtDescription.Text,
+
                 Date = Convert.ToDateTime(dateDate.EditValue),
-                Paid =calcAmount.Value
+                Paid = calcAmount.Value
             };
             _saved = true;
             this.Close();
@@ -58,7 +63,7 @@ namespace CafeOtomasyonu.WinForms.Payments
 
         private void btnRemainder_Click(object sender, EventArgs e)
         {
-            calcAmount.Value= _remainder;
+            calcAmount.Value = _remainder;
         }
     }
 }

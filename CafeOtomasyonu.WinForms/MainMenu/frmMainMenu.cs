@@ -13,6 +13,8 @@ using CafeOtomasyonu.WinForms.Menus;
 using CafeOtomasyonu.WinForms.Payments;
 using DevExpress.XtraEditors;
 using CafeOtomasyonu.WinForms.Products;
+using CafeOtomasyonu.WinForms.ReportFile;
+using CafeOtomasyonu.WinForms.ReportForm;
 using CafeOtomasyonu.WinForms.Sales;
 using CafeOtomasyonu.WinForms.Tables;
 using CafeOtomasyonu.WinForms.Users;
@@ -85,6 +87,18 @@ namespace CafeOtomasyonu.WinForms.MainMenu
                 } 
             }
 
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void barButtonTableTransactionsReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            rptTableTransactionReport report = new rptTableTransactionReport();
+            frmReportView2 frm = new frmReportView2(report);
+            frm.ShowDialog();
         }
     }
 }

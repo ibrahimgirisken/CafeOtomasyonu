@@ -149,6 +149,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnReceiptPrint = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
@@ -1224,6 +1225,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnReceiptPrint);
             this.groupControl1.Controls.Add(this.btnSave);
             this.groupControl1.Controls.Add(this.btnResult);
             this.groupControl1.Controls.Add(this.btnClose);
@@ -1378,6 +1380,16 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1241, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 771);
+            // 
+            // btnReceiptPrint
+            // 
+            this.btnReceiptPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnReceiptPrint.Location = new System.Drawing.Point(308, 31);
+            this.btnReceiptPrint.Name = "btnReceiptPrint";
+            this.btnReceiptPrint.Size = new System.Drawing.Size(95, 38);
+            this.btnReceiptPrint.TabIndex = 3;
+            this.btnReceiptPrint.Text = "Fiş Yazdır";
+            this.btnReceiptPrint.Click += new System.EventHandler(this.btnReceiptPrint_Click);
             // 
             // frmTableOrders
             // 
@@ -1558,5 +1570,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryFiyat;
+        private DevExpress.XtraEditors.SimpleButton btnReceiptPrint;
     }
 }

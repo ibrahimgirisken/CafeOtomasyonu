@@ -91,19 +91,19 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
-            this.btnClose.Location = new System.Drawing.Point(218, 31);
+            this.btnClose.Location = new System.Drawing.Point(203, 31);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 38);
+            this.btnClose.Size = new System.Drawing.Size(87, 38);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Kapat";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnForgetPass
             // 
-            this.btnForgetPass.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnForgetedPass.ImageOptions.Image")));
-            this.btnForgetPass.Location = new System.Drawing.Point(97, 31);
+            this.btnForgetPass.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnForgetPass.ImageOptions.Image")));
+            this.btnForgetPass.Location = new System.Drawing.Point(110, 31);
             this.btnForgetPass.Name = "btnForgetPass";
-            this.btnForgetPass.Size = new System.Drawing.Size(75, 38);
+            this.btnForgetPass.Size = new System.Drawing.Size(87, 38);
             this.btnForgetPass.TabIndex = 1;
             this.btnForgetPass.Text = "Parolamı\r\nUnuttum";
             this.btnForgetPass.Click += new System.EventHandler(this.btnForgetPass_Click);
@@ -111,23 +111,23 @@
             // btnUserLogin
             // 
             this.btnUserLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUserLogin.ImageOptions.Image")));
-            this.btnUserLogin.Location = new System.Drawing.Point(16, 31);
+            this.btnUserLogin.Location = new System.Drawing.Point(17, 31);
             this.btnUserLogin.Name = "btnUserLogin";
-            this.btnUserLogin.Size = new System.Drawing.Size(75, 38);
+            this.btnUserLogin.Size = new System.Drawing.Size(87, 38);
             this.btnUserLogin.TabIndex = 0;
             this.btnUserLogin.Text = "Giriş";
             this.btnUserLogin.Click += new System.EventHandler(this.btnUserLogin_Click);
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(193, 73);
+            this.txtUserName.Location = new System.Drawing.Point(193, 59);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtUserName.Properties.Appearance.Options.UseFont = true;
             this.txtUserName.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtUserName.Properties.ContextImageOptions.Image")));
             this.txtUserName.Properties.NullText = "Kullanıcı Adınızı Giriniz!";
             this.txtUserName.Properties.NullValuePrompt = "Kullanıcı Adınızı Giriniz!";
-            this.txtUserName.Size = new System.Drawing.Size(274, 22);
+            this.txtUserName.Size = new System.Drawing.Size(274, 36);
             this.txtUserName.TabIndex = 0;
             // 
             // txtUserPass
@@ -136,18 +136,18 @@
             this.txtUserPass.Name = "txtUserPass";
             this.txtUserPass.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtUserPass.Properties.Appearance.Options.UseFont = true;
-            this.txtUserPass.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtUserPass.Properties.ContextImageOptions.Image")));
+            this.txtUserPass.Properties.ContextImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("txtUserPass.Properties.ContextImageOptions.SvgImage")));
             this.txtUserPass.Properties.NullText = "Şifrenizi Giriniz!";
             this.txtUserPass.Properties.NullValuePrompt = "Şifrenizi Giriniz!";
             this.txtUserPass.Properties.UseSystemPasswordChar = true;
-            this.txtUserPass.Size = new System.Drawing.Size(274, 22);
+            this.txtUserPass.Size = new System.Drawing.Size(274, 36);
             this.txtUserPass.TabIndex = 1;
             // 
             // lblRegister
             // 
             this.lblRegister.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegister.Appearance.Options.UseFont = true;
-            this.lblRegister.Location = new System.Drawing.Point(418, 131);
+            this.lblRegister.Location = new System.Drawing.Point(407, 147);
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(49, 16);
             this.lblRegister.TabIndex = 4;
@@ -156,7 +156,7 @@
             // 
             // chkRememberMe
             // 
-            this.chkRememberMe.Location = new System.Drawing.Point(209, 129);
+            this.chkRememberMe.Location = new System.Drawing.Point(197, 143);
             this.chkRememberMe.Name = "chkRememberMe";
             this.chkRememberMe.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkRememberMe.Properties.Appearance.Options.UseFont = true;

@@ -49,6 +49,9 @@
             this.btnSales = new DevExpress.XtraBars.BarButtonItem();
             this.btnPaymentTransactions = new DevExpress.XtraBars.BarButtonItem();
             this.btnPackageOrder = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonTableTransactionsReport = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -57,6 +60,8 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -89,14 +94,18 @@
             this.barButtonItem2,
             this.btnSales,
             this.btnPaymentTransactions,
-            this.btnPackageOrder});
+            this.btnPackageOrder,
+            this.barButtonItem3,
+            this.barButtonTableTransactionsReport});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 20;
+            this.ribbon.MaxItemId = 27;
             this.ribbon.Name = "ribbon";
+            this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
+            this.ribbonPageCategory1});
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(1048, 158);
+            this.ribbon.Size = new System.Drawing.Size(1159, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnTables
@@ -246,6 +255,29 @@
             this.btnPackageOrder.Name = "btnPackageOrder";
             this.btnPackageOrder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPackageOrder_ItemClick);
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Çıkış";
+            this.barButtonItem3.Id = 20;
+            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // barButtonTableTransactionsReport
+            // 
+            this.barButtonTableTransactionsReport.Caption = "Masa Hareketleri Raporu";
+            this.barButtonTableTransactionsReport.Id = 26;
+            this.barButtonTableTransactionsReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonTableTransactionsReport.ImageOptions.Image")));
+            this.barButtonTableTransactionsReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonTableTransactionsReport.ImageOptions.LargeImage")));
+            this.barButtonTableTransactionsReport.Name = "barButtonTableTransactionsReport";
+            this.barButtonTableTransactionsReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonTableTransactionsReport_ItemClick);
+            // 
+            // ribbonPageCategory1
+            // 
+            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
+            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
+            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -255,7 +287,9 @@
             this.ribbonPageGroup5,
             this.ribbonPageGroup6,
             this.ribbonPageGroup7,
-            this.ribbonPageGroup8});
+            this.ribbonPageGroup8,
+            this.ribbonPageGroup10,
+            this.ribbonPageGroup9});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Cafe İşlemleri";
             // 
@@ -302,7 +336,6 @@
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.AllowTextClipping = false;
             this.ribbonPageGroup7.ItemLinks.Add(this.btnSales);
             this.ribbonPageGroup7.ItemLinks.Add(this.btnPaymentTransactions);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
@@ -310,9 +343,22 @@
             // 
             // ribbonPageGroup8
             // 
+            this.ribbonPageGroup8.AllowTextClipping = false;
             this.ribbonPageGroup8.ItemLinks.Add(this.btnPackageOrder);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Paket Sipariş";
+            // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonTableTransactionsReport);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageGroup10.Text = "Raporlar";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.AllowTextClipping = false;
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             // 
             // ribbonPage1
             // 
@@ -334,7 +380,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 501);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1048, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1159, 24);
             // 
             // ribbonPage3
             // 
@@ -347,9 +393,10 @@
             // 
             // frmMainMenu
             // 
+            this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 525);
+            this.ClientSize = new System.Drawing.Size(1159, 525);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
@@ -400,5 +447,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem btnPackageOrder;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.BarButtonItem barButtonTableTransactionsReport;
+        private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
     }
 }

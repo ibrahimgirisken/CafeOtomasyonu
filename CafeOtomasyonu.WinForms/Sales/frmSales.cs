@@ -44,5 +44,28 @@ namespace CafeOtomasyonu.WinForms.Sales
             frmPaymentTransactions frm = new frmPaymentTransactions(salesCode: salesCode);
             frm.ShowDialog();
         }
+
+        private void Export_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (SaveFileDialog dialog=new SaveFileDialog())
+            {
+                dialog.Filter = e.Item.Tag.ToString();
+                if (dialog.ShowDialog()==DialogResult.OK)
+                {
+                    if (e.Item==btnExcelExport)
+                    {
+                        gridViewSales.ExportToXlsx(dialog.FileName);
+                    }
+                    else if (e.Item == btnWordExport)
+                    {
+                        gridViewSales.ExportToXlsx(dialog.FileName);
+                    }
+                    else if (e.Item == btnPdfExport)
+                    {
+                        gridViewSales.ExportToPdf(dialog.FileName);
+                    }
+                }
+            }
+        }
     }
 }

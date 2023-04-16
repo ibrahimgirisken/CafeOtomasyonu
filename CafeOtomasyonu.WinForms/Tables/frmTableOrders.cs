@@ -13,7 +13,9 @@ using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
 using CafeOtomasyonu.WinForms.Payments;
 using CafeOtomasyonu.WinForms.Products;
+using CafeOtomasyonu.WinForms.ReportForm;
 using DevExpress.Accessibility;
+using CafeOtomasyonu.WinForms.ReportFile;
 
 namespace CafeOtomasyonu.WinForms.Tables
 {
@@ -31,6 +33,7 @@ namespace CafeOtomasyonu.WinForms.Tables
         private TablesDal _tablesDal = new TablesDal();
         ProductDal _productDal = new ProductDal();
         private bool _packageOrder = false;
+        private bool _print;
 
         public frmTableOrders(int? tableId = null, string tableName = null, string salesCode = null, bool packageOrder = false)
         {
@@ -58,7 +61,7 @@ namespace CafeOtomasyonu.WinForms.Tables
             {
                 lookUpCustomer.EditValue = _sales.CustomerId;
                 txtDescription.Text = _sales.Description;
-                dateDate.Text = _sales.EndProcessDate.ToString("dd.MM.yyyy");
+                dateDate.Text = _sales.EndProcessDate.ToString();
             }
 
         }
@@ -168,6 +171,7 @@ namespace CafeOtomasyonu.WinForms.Tables
                     _sales.PackageOrder = _packageOrder;
                     _salesDal.AddOrUpdate(_context, _sales);
                     _context.SaveChanges();
+                    _print = true;
                 }
                 else
                 {
@@ -265,6 +269,36 @@ namespace CafeOtomasyonu.WinForms.Tables
         private void Prices(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             gridViewOrders.SetFocusedRowCellValue(colUnitPrice, e.Item.Caption);
+        }
+
+        private void btnReceiptPrint_Click(object sender, EventArgs e)
+        {
+            btnSave.PerformClick();
+            if (_print == true)
+                if (_tableId != null)
+                {
+                    rptSalesReceipt _rptSalesReceipt = new rptSalesReceipt(salesCode: _salesCode, info: _tables.TableName, _sales);
+                    frmReportView frm = new frmReportView(_rptSalesReceipt);
+                    frm.ShowDialog();
+                }
+                else if (_tableId == null)
+                {
+                    if (_sales.CustomerId == null)
+                    {
+                        rptSalesReceipt _rptSalesReceipt = new rptSalesReceipt(salesCode: _salesCode, info: _salesCode, _sales);
+                        frmReportView frm = new frmReportView(_rptSalesReceipt);
+                        frm.ShowDialog();
+
+                    }
+                    else if (_sales.CustomerId != null)
+
+                    {
+                        rptSalesReceipt _rptSalesReceipt = new rptSalesReceipt(salesCode: _salesCode,info:_salesCode+" "+_sales.Customers.FullName,_sales);
+                        frmReportView frm = new frmReportView(_rptSalesReceipt);
+                        frm.ShowDialog();
+                    }
+
+                }
         }
     }
 }

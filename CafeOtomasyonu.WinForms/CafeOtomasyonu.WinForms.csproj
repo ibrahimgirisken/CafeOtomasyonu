@@ -36,16 +36,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.2.Drawing, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Export, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.2.Extensions, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -109,6 +125,42 @@
     </Compile>
     <Compile Include="Payments\frmPaymentTransactions.Designer.cs">
       <DependentUpon>frmPaymentTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFile\rptSales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportFile\rptSales.Designer.cs">
+      <DependentUpon>rptSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportView.Designer.cs">
+      <DependentUpon>frmReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFile\rptSalesReceipt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportFile\rptSalesReceipt.Designer.cs">
+      <DependentUpon>rptSalesReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFile\rptTableTransactionReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportFile\rptTableTransactionReport.Designer.cs">
+      <DependentUpon>rptTableTransactionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportView2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportView2.Designer.cs">
+      <DependentUpon>frmReportView2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportView3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportView3.Designer.cs">
+      <DependentUpon>frmReportView3.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\frmSales.cs">
       <SubType>Form</SubType>
@@ -195,6 +247,24 @@
     </Compile>
     <EmbeddedResource Include="Payments\frmPaymentTransactions.resx">
       <DependentUpon>frmPaymentTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFile\rptSales.resx">
+      <DependentUpon>rptSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportView.resx">
+      <DependentUpon>frmReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFile\rptSalesReceipt.resx">
+      <DependentUpon>rptSalesReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFile\rptTableTransactionReport.resx">
+      <DependentUpon>rptTableTransactionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportView2.resx">
+      <DependentUpon>frmReportView2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportView3.resx">
+      <DependentUpon>frmReportView3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmSales.resx">
       <DependentUpon>frmSales.cs</DependentUpon>
