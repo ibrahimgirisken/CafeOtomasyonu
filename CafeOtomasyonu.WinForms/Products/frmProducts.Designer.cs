@@ -54,6 +54,7 @@
             this.colMenuName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnTableMovements = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlProducts)).BeginInit();
@@ -77,6 +78,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnTableMovements);
             this.groupControl1.Controls.Add(this.btnClose);
             this.groupControl1.Controls.Add(this.brnDelete);
             this.groupControl1.Controls.Add(this.btnRefresh);
@@ -114,7 +116,7 @@
             // btnRefresh
             // 
             this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(167, 31);
+            this.btnRefresh.Location = new System.Drawing.Point(296, 31);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 38);
             this.btnRefresh.TabIndex = 2;
@@ -287,6 +289,16 @@
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
             // 
+            // btnTableMovements
+            // 
+            this.btnTableMovements.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTableMovements.ImageOptions.Image")));
+            this.btnTableMovements.Location = new System.Drawing.Point(167, 31);
+            this.btnTableMovements.Name = "btnTableMovements";
+            this.btnTableMovements.Size = new System.Drawing.Size(123, 38);
+            this.btnTableMovements.TabIndex = 5;
+            this.btnTableMovements.Text = "Masa Hareketleri";
+            this.btnTableMovements.Click += new System.EventHandler(this.btnTableMovements_Click);
+            // 
             // frmProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,5 +345,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn colMenuName;
         private System.Windows.Forms.BindingSource productBindingSource;
+        private DevExpress.XtraEditors.SimpleButton btnTableMovements;
     }
 }

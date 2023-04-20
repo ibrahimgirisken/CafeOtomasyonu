@@ -15,8 +15,8 @@ namespace CafeOtomasyonu.WinForms.Tables
 {
     public partial class frmTables : DevExpress.XtraEditors.XtraForm
     {
-        CafeContext _context=new CafeContext();
-        TablesDal _tablesDal=new TablesDal();
+        CafeContext _context = new CafeContext();
+        TablesDal _tablesDal = new TablesDal();
         public frmTables()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace CafeOtomasyonu.WinForms.Tables
         private void btnEdit_Click(object sender, EventArgs e)
         {
             int selectId = Convert.ToInt32(gridViewTables.GetFocusedRowCellValue(colId));
-            var tables = _tablesDal.GetByFilter(_context,t=>t.Id==selectId);
+            var tables = _tablesDal.GetByFilter(_context, t => t.Id == selectId);
             frmTableAdd frm = new frmTableAdd(tables);
             frm.ShowDialog();
             if (frm._saveStatus)
@@ -57,7 +57,7 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         private void btnStatusReplace_Click(object sender, EventArgs e)
         {
-            if (gridViewTables.SelectedRowsCount>0)
+            if (gridViewTables.SelectedRowsCount > 0)
             {
                 int selectId = Convert.ToInt32(gridViewTables.GetFocusedRowCellValue(colId));
                 var tables = _tablesDal.GetByFilter(_context, t => t.Id == selectId);
@@ -68,7 +68,7 @@ namespace CafeOtomasyonu.WinForms.Tables
                 else if (!tables.Status)
                 {
                     tables.Status = true;
-                } 
+                }
                 _tablesDal.Save(_context);
                 tableList();
             }
@@ -108,6 +108,14 @@ namespace CafeOtomasyonu.WinForms.Tables
                 _tablesDal.Save(_context);
                 tableList();
             }
+        }
+
+        private void btnTableMovements_Click(object sender, EventArgs e)
+        {
+            int _tableId = Convert.ToInt32(gridViewTables.GetFocusedRowCellValue(colId));
+
+            frmTableMovements frm_TableMovements = new frmTableMovements(tableId: _tableId);
+            frm_TableMovements.ShowDialog();
         }
     }
 }

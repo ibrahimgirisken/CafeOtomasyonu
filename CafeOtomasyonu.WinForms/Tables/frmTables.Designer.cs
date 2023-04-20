@@ -35,6 +35,7 @@
             this.btnRezervReplace = new DevExpress.XtraEditors.SimpleButton();
             this.btnStatusReplace = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTableMovements = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
@@ -76,6 +77,7 @@
             this.groupControl1.Controls.Add(this.btnRezervReplace);
             this.groupControl1.Controls.Add(this.btnStatusReplace);
             this.groupControl1.Controls.Add(this.btnDelete);
+            this.groupControl1.Controls.Add(this.btnTableMovements);
             this.groupControl1.Controls.Add(this.btnRefresh);
             this.groupControl1.Controls.Add(this.btnEdit);
             this.groupControl1.Controls.Add(this.btnNew);
@@ -129,6 +131,16 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Sil";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnTableMovements
+            // 
+            this.btnTableMovements.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTableMovements.ImageOptions.Image")));
+            this.btnTableMovements.Location = new System.Drawing.Point(248, 31);
+            this.btnTableMovements.Name = "btnTableMovements";
+            this.btnTableMovements.Size = new System.Drawing.Size(123, 38);
+            this.btnTableMovements.TabIndex = 2;
+            this.btnTableMovements.Text = "Masa Hareketleri";
+            this.btnTableMovements.Click += new System.EventHandler(this.btnTableMovements_Click);
             // 
             // btnRefresh
             // 
@@ -317,5 +329,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTableMovements;
         private DevExpress.XtraEditors.SimpleButton btnRezervReplace;
         private DevExpress.XtraEditors.SimpleButton btnStatusReplace;
+        private DevExpress.XtraEditors.SimpleButton btnTableMovements;
     }
 }

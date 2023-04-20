@@ -31,8 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenus));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnTableMovements = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
-            this.brnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.gridControlMenu = new DevExpress.XtraGrid.GridControl();
             this.gridViewMenu = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -61,8 +62,9 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnTableMovements);
             this.groupControl1.Controls.Add(this.btnClose);
-            this.groupControl1.Controls.Add(this.brnDelete);
+            this.groupControl1.Controls.Add(this.btnDelete);
             this.groupControl1.Controls.Add(this.btnSave);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 394);
@@ -70,6 +72,16 @@
             this.groupControl1.Size = new System.Drawing.Size(748, 74);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "İşlemler";
+            // 
+            // btnTableMovements
+            // 
+            this.btnTableMovements.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTableMovements.ImageOptions.Image")));
+            this.btnTableMovements.Location = new System.Drawing.Point(167, 31);
+            this.btnTableMovements.Name = "btnTableMovements";
+            this.btnTableMovements.Size = new System.Drawing.Size(123, 38);
+            this.btnTableMovements.TabIndex = 3;
+            this.btnTableMovements.Text = "Masa Hareketleri";
+            this.btnTableMovements.Click += new System.EventHandler(this.btnTableMovements_Click);
             // 
             // btnClose
             // 
@@ -82,15 +94,15 @@
             this.btnClose.Text = "Kapat";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // brnDelete
+            // btnDelete
             // 
-            this.brnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("brnDelete.ImageOptions.Image")));
-            this.brnDelete.Location = new System.Drawing.Point(86, 31);
-            this.brnDelete.Name = "brnDelete";
-            this.brnDelete.Size = new System.Drawing.Size(75, 38);
-            this.brnDelete.TabIndex = 0;
-            this.brnDelete.Text = "Sil";
-            this.brnDelete.Click += new System.EventHandler(this.brnDelete_Click);
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(86, 31);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 38);
+            this.btnDelete.TabIndex = 0;
+            this.btnDelete.Text = "Sil";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -176,10 +188,11 @@
         private DevExpress.XtraGrid.GridControl gridControlMenu;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewMenu;
         private DevExpress.XtraEditors.SimpleButton btnClose;
-        private DevExpress.XtraEditors.SimpleButton brnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colMenuName;
         private DevExpress.XtraGrid.Columns.GridColumn colDescription;
+        private DevExpress.XtraEditors.SimpleButton btnTableMovements;
     }
 }

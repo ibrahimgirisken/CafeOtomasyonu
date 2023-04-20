@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
+using CafeOtomasyonu.WinForms.Tables;
 
 namespace CafeOtomasyonu.WinForms.Products
 {
@@ -68,6 +69,14 @@ namespace CafeOtomasyonu.WinForms.Products
                 _productDal.Save(_context);
                 productList();
             }
+        }
+
+        private void btnTableMovements_Click(object sender, EventArgs e)
+        {
+            int _productId = Convert.ToInt32(gridViewProducts.GetFocusedRowCellValue(colId));
+
+            frmTableMovements frm_TableMovements = new frmTableMovements(productId: _productId);
+            frm_TableMovements.ShowDialog();
         }
     }
 }

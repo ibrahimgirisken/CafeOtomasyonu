@@ -51,6 +51,7 @@
             this.btnPackageOrder = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonTableTransactionsReport = new DevExpress.XtraBars.BarButtonItem();
+            this.barSpecialReport = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -96,9 +97,10 @@
             this.btnPaymentTransactions,
             this.btnPackageOrder,
             this.barButtonItem3,
-            this.barButtonTableTransactionsReport});
+            this.barButtonTableTransactionsReport,
+            this.barSpecialReport});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 27;
+            this.ribbon.MaxItemId = 28;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -124,6 +126,7 @@
             this.btnTableMovements.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTableMovements.ImageOptions.Image")));
             this.btnTableMovements.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTableMovements.ImageOptions.LargeImage")));
             this.btnTableMovements.Name = "btnTableMovements";
+            this.btnTableMovements.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTableMovements_ItemClick);
             // 
             // btnMenus
             // 
@@ -166,6 +169,7 @@
             this.btnUsers.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.ImageOptions.Image")));
             this.btnUsers.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUsers.ImageOptions.LargeImage")));
             this.btnUsers.Name = "btnUsers";
+            this.btnUsers.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUsers_ItemClick);
             // 
             // btnUserMovements
             // 
@@ -174,6 +178,7 @@
             this.btnUserMovements.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUserMovements.ImageOptions.Image")));
             this.btnUserMovements.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUserMovements.ImageOptions.LargeImage")));
             this.btnUserMovements.Name = "btnUserMovements";
+            this.btnUserMovements.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUserMovements_ItemClick);
             // 
             // btnRoles
             // 
@@ -182,6 +187,7 @@
             this.btnRoles.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRoles.ImageOptions.Image")));
             this.btnRoles.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRoles.ImageOptions.LargeImage")));
             this.btnRoles.Name = "btnRoles";
+            this.btnRoles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRoles_ItemClick);
             // 
             // btnDoviz
             // 
@@ -266,12 +272,21 @@
             // 
             // barButtonTableTransactionsReport
             // 
-            this.barButtonTableTransactionsReport.Caption = "Masa Hareketleri Raporu";
+            this.barButtonTableTransactionsReport.Caption = "Masa Hareketleri\r\nRaporu";
             this.barButtonTableTransactionsReport.Id = 26;
             this.barButtonTableTransactionsReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonTableTransactionsReport.ImageOptions.Image")));
             this.barButtonTableTransactionsReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonTableTransactionsReport.ImageOptions.LargeImage")));
             this.barButtonTableTransactionsReport.Name = "barButtonTableTransactionsReport";
             this.barButtonTableTransactionsReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonTableTransactionsReport_ItemClick);
+            // 
+            // barSpecialReport
+            // 
+            this.barSpecialReport.Caption = "Özel Rapor\r\nOluştur";
+            this.barSpecialReport.Id = 27;
+            this.barSpecialReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSpecialReport.ImageOptions.Image")));
+            this.barSpecialReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSpecialReport.ImageOptions.LargeImage")));
+            this.barSpecialReport.Name = "barSpecialReport";
+            this.barSpecialReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // ribbonPageCategory1
             // 
@@ -351,6 +366,7 @@
             // ribbonPageGroup10
             // 
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonTableTransactionsReport);
+            this.ribbonPageGroup10.ItemLinks.Add(this.barSpecialReport);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "Raporlar";
             // 
@@ -406,6 +422,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Cafe Otomasyonu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
@@ -414,8 +431,6 @@
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
@@ -452,5 +467,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonTableTransactionsReport;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.BarButtonItem barSpecialReport;
+        public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
     }
 }
