@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
 using CafeOtomasyonu.WinForms.Menus;
 using CafeOtomasyonu.WinForms.Payments;
@@ -17,14 +18,17 @@ using CafeOtomasyonu.WinForms.ReportFile;
 using CafeOtomasyonu.WinForms.ReportForm;
 using CafeOtomasyonu.WinForms.Roles;
 using CafeOtomasyonu.WinForms.Sales;
+using CafeOtomasyonu.WinForms.Settings;
 using CafeOtomasyonu.WinForms.Tables;
 using CafeOtomasyonu.WinForms.Users;
+using CafeOtomasyonu.WinForms.WinTools;
 
 namespace CafeOtomasyonu.WinForms.MainMenu
 {
     public partial class frmMainMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private CafeContext context = new CafeContext();
+        private UsersDal _usersDal = new UsersDal();
         public frmMainMenu()
         {
             InitializeComponent();
@@ -185,11 +189,6 @@ namespace CafeOtomasyonu.WinForms.MainMenu
 
         }
 
-        private void btnRoles_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
         private frmTableMovements frm_TableMovements;
         private void btnTableMovements_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -216,6 +215,26 @@ namespace CafeOtomasyonu.WinForms.MainMenu
             XtraForm frm = new frmUserLogin();
             frm.ShowDialog();
             UserAuthorization.GetAuthorization(context, ribbon);
+        }
+
+        private void btnUserInfo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var model = _usersDal.GetByFilter(context, u => u.Id == UserSettings.userId);
+            frmUserAdd frm = new frmUserAdd(model, "kullanıcı");
+            frm.ShowDialog();
+        }
+
+        private frmSettings frm_Settings;
+        private void btnSettings_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            using (frm_Settings=new frmSettings())
+            {
+                if (frm_Settings!=null||frm_Settings.IsDisposed)
+                {
+                    frm_Settings.ShowDialog();
+                }
+            }
+
         }
     }
 }

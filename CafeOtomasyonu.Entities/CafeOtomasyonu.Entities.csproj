@@ -93,6 +93,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Rollers.cs" />
     <Compile Include="Models\Sales.cs" />
+    <Compile Include="Models\Settings.cs" />
     <Compile Include="Models\TableMovements.cs" />
     <Compile Include="Models\Tables.cs" />
     <Compile Include="Models\UserMovements.cs" />

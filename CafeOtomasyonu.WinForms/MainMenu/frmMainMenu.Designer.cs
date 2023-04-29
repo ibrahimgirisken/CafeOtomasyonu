@@ -39,7 +39,7 @@
             this.btnProductMovements = new DevExpress.XtraBars.BarButtonItem();
             this.btnUsers = new DevExpress.XtraBars.BarButtonItem();
             this.btnUserMovements = new DevExpress.XtraBars.BarButtonItem();
-            this.btnRoles = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUserInfo = new DevExpress.XtraBars.BarButtonItem();
             this.btnDoviz = new DevExpress.XtraBars.BarButtonItem();
             this.btnHelp = new DevExpress.XtraBars.BarButtonItem();
             this.btnAbout = new DevExpress.XtraBars.BarButtonItem();
@@ -52,7 +52,9 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonTableTransactionsReport = new DevExpress.XtraBars.BarButtonItem();
             this.barSpecialReport = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSettings = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
+            this.ribbonPageCategory2 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -86,7 +88,7 @@
             this.btnProductMovements,
             this.btnUsers,
             this.btnUserMovements,
-            this.btnRoles,
+            this.btnUserInfo,
             this.btnDoviz,
             this.btnHelp,
             this.btnAbout,
@@ -98,12 +100,14 @@
             this.btnPackageOrder,
             this.barButtonItem3,
             this.barButtonTableTransactionsReport,
-            this.barSpecialReport});
+            this.barSpecialReport,
+            this.btnSettings});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 28;
+            this.ribbon.MaxItemId = 29;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
-            this.ribbonPageCategory1});
+            this.ribbonPageCategory1,
+            this.ribbonPageCategory2});
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
             this.ribbonPage1});
@@ -180,14 +184,14 @@
             this.btnUserMovements.Name = "btnUserMovements";
             this.btnUserMovements.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUserMovements_ItemClick);
             // 
-            // btnRoles
+            // btnUserInfo
             // 
-            this.btnRoles.Caption = "Role Tanımlama";
-            this.btnRoles.Id = 10;
-            this.btnRoles.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRoles.ImageOptions.Image")));
-            this.btnRoles.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRoles.ImageOptions.LargeImage")));
-            this.btnRoles.Name = "btnRoles";
-            this.btnRoles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRoles_ItemClick);
+            this.btnUserInfo.Caption = "Bilgilerim";
+            this.btnUserInfo.Id = 10;
+            this.btnUserInfo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUserInfo.ImageOptions.Image")));
+            this.btnUserInfo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUserInfo.ImageOptions.LargeImage")));
+            this.btnUserInfo.Name = "btnUserInfo";
+            this.btnUserInfo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUserInfo_ItemClick);
             // 
             // btnDoviz
             // 
@@ -288,10 +292,24 @@
             this.barSpecialReport.Name = "barSpecialReport";
             this.barSpecialReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
+            // btnSettings
+            // 
+            this.btnSettings.Caption = "Ayarlar";
+            this.btnSettings.Id = 28;
+            this.btnSettings.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.ImageOptions.Image")));
+            this.btnSettings.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSettings.ImageOptions.LargeImage")));
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSettings_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
             this.ribbonPageCategory1.Text = "ribbonPageCategory1";
+            // 
+            // ribbonPageCategory2
+            // 
+            this.ribbonPageCategory2.Name = "ribbonPageCategory2";
+            this.ribbonPageCategory2.Text = "ribbonPageCategory2";
             // 
             // ribbonPage2
             // 
@@ -338,7 +356,7 @@
             this.ribbonPageGroup5.AllowTextClipping = false;
             this.ribbonPageGroup5.ItemLinks.Add(this.btnUsers);
             this.ribbonPageGroup5.ItemLinks.Add(this.btnUserMovements);
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnRoles);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnUserInfo);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Kullanıcılar";
             // 
@@ -388,6 +406,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDoviz);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnHelp);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAbout);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnSettings);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Ayarlar";
             // 
@@ -448,7 +467,7 @@
         private DevExpress.XtraBars.BarButtonItem btnUsers;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem btnUserMovements;
-        private DevExpress.XtraBars.BarButtonItem btnRoles;
+        private DevExpress.XtraBars.BarButtonItem btnUserInfo;
         private DevExpress.XtraBars.BarButtonItem btnDoviz;
         private DevExpress.XtraBars.BarButtonItem btnHelp;
         private DevExpress.XtraBars.BarButtonItem btnAbout;
@@ -469,5 +488,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.BarButtonItem barSpecialReport;
         public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
+        private DevExpress.XtraBars.BarButtonItem btnSettings;
+        private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory2;
     }
 }

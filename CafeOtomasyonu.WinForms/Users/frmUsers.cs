@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
+using CafeOtomasyonu.WinForms.Roles;
 
 namespace CafeOtomasyonu.WinForms.Users
 {
@@ -21,6 +22,7 @@ namespace CafeOtomasyonu.WinForms.Users
         {
             InitializeComponent();
             UserList();
+            UserAuthorization.AdminStatus(context,btnUserAdd,btnUserRoles,btnUserUpdate,btnUserSave,gridControlUsers);
         }
 
         private void UserList()
@@ -38,10 +40,11 @@ namespace CafeOtomasyonu.WinForms.Users
             context.SaveChanges();
             this.UserList();    
         }
-
         private void btnUserRoles_Click(object sender, EventArgs e)
         {
-
+            int id = Convert.ToInt32(gridViewUsers.GetFocusedRowCellValue(colId));
+            frmUserRoles frm_UserRoles = new frmUserRoles(id);
+            frm_UserRoles.ShowDialog();
         }
 
         private frmUserAdd frm_UserAdd;

@@ -187,6 +187,12 @@
     <Compile Include="Sales\frmSales.Designer.cs">
       <DependentUpon>frmSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tables\frmTableAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,12 @@
     </Compile>
     <Compile Include="Users\frmUserLogin.Designer.cs">
       <DependentUpon>frmUserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUserRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUserRoles.Designer.cs">
+      <DependentUpon>frmUserRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmUsers.cs">
       <SubType>Form</SubType>
@@ -309,6 +321,9 @@
     <EmbeddedResource Include="Sales\frmSales.resx">
       <DependentUpon>frmSales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tables\frmTableAdd.resx">
       <DependentUpon>frmTableAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmUserLogin.resx">
       <DependentUpon>frmUserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUserRoles.resx">
+      <DependentUpon>frmUserRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>

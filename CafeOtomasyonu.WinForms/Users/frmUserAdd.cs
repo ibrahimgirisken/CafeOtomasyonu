@@ -12,6 +12,7 @@ using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
 using DevExpress.XtraBars;
 using CafeOtomasyonu.WinForms.MainMenu;
+using CafeOtomasyonu.WinForms.WinTools;
 
 namespace CafeOtomasyonu.WinForms.Users
 {
@@ -22,11 +23,13 @@ namespace CafeOtomasyonu.WinForms.Users
         private UserMovements _userMovements=new UserMovements();
         private UsersDal usersDal=new UsersDal();
         private UserMovementsDal _userMovementsDal=new UserMovementsDal();
+        private string _loginUser;
 
-        public frmUserAdd(Entities.Models.Users users)
+        public frmUserAdd(Entities.Models.Users users,string loginUser=null)
         {
             InitializeComponent();
             this._users = users;
+            _loginUser = loginUser;
             tglStatus.DataBindings.Add("EditValue", _users, "Status", true);
             txtFullName.DataBindings.Add("Text", _users, "FullName", true);
             txtTelephone.DataBindings.Add("Text", _users, "Telephone", true);
@@ -95,9 +98,18 @@ namespace CafeOtomasyonu.WinForms.Users
                 if (usersDal.AddOrUpdate(context,_users))
                 {
                     usersDal.Save(context);
-                    var id = _users.Id;
-                    _userMovements.UserId = id;
-                    string description = "Yönetici tarafından "+_users.UserName+" kullanıcısının bilgileri güncellendi.";
+                    var userIdMax = _users.Id;
+                    _userMovements.UserId = userIdMax;
+                    string description;
+                    if (_loginUser != null)
+                    {
+                        var model = usersDal.GetByFilter(context, u => u.Id == UserSettings.userId);
+                        description = model.UserName + " bilgilerini değiştirdi";
+                    }
+                    else
+                    {
+                        description = "Yönetici tarafından " + _users.UserName + " bilgileri güncellendi";
+                    }
                     _userMovementsDal.UserMovementsDalAdd(context, _userMovements, description);
                     this.Close();
                 }

@@ -34,6 +34,7 @@ namespace CafeOtomasyonu.WinForms.Tables
         ProductDal _productDal = new ProductDal();
         private bool _packageOrder = false;
         private bool _print;
+        frmProductSelect frm = new frmProductSelect();
 
         public frmTableOrders(int? tableId = null, string tableName = null, string salesCode = null, bool packageOrder = false)
         {
@@ -117,9 +118,29 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         }
 
+        decimal getPrice()
+        {
+            decimal unitPrice = frm._product.UnitPrice1;
+            var model = _context.Settings.FirstOrDefault(p=>p.SettingDefinition=="Unit Price");
+            if (model!=null)
+            {
+                switch (model.SettingName)
+                {
+                    case "UnitPrice1":
+                        unitPrice = frm._product.UnitPrice1;
+                        break;
+                    case "UnitPrice2":
+                        unitPrice = frm._product.UnitPrice2;
+                        break;
+                    case "UnitPrice3":
+                        unitPrice = frm._product.UnitPrice3;
+                        break;
+                }
+            }
+            return unitPrice;
+        }
         private void btnOrderAdd_Click(object sender, EventArgs e)
         {
-            frmProductSelect frm = new frmProductSelect();
             frm.ShowDialog();
             if (frm._selected)
             {
@@ -129,7 +150,7 @@ namespace CafeOtomasyonu.WinForms.Tables
                     TableId = _tableId,
                     ProductId = frm._product.Id,
                     Quantity = 1,
-                    UnitPrice = frm._product.UnitPrice1,
+                    UnitPrice = getPrice(),
                     DiscountTotal = 0,
                     Description = txtDescription.Text,
                     Date = DateTime.Now

@@ -25,7 +25,7 @@ namespace CafeOtomasyonu.Entities.Models
         public DbSet<Users> Users { get; set; }
         public  DbSet<Customers> Customers { get; set; }
         public  DbSet<OrderCode> OrderCodes { get; set; }
-
+        public DbSet<Settings> Settings { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new MenuMap());

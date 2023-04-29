@@ -25,8 +25,7 @@ namespace CafeOtomasyonu.WinForms.Menus
             InitializeComponent();
             _context.Menu.Load();
             gridControlMenu.DataSource = _context.Menu.Local.ToBindingList();
-            UserAuthorization.AdminStatus(_context,btnSave);  
-            UserAuthorization.AdminStatus(_context,btnDelete);  
+            UserAuthorization.AdminStatus(_context,btnSave,btnDelete);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
