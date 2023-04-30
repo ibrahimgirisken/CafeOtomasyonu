@@ -45,7 +45,6 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.repositoryOrderDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryFiyat = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnRezervTable = new DevExpress.XtraEditors.SimpleButton();
             this.btnNullTable = new DevExpress.XtraEditors.SimpleButton();
@@ -71,6 +70,7 @@
             this.gridControlOrders = new DevExpress.XtraGrid.GridControl();
             this.gridViewOrders = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colOrderDelete = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryOrderDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSalesCode1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -84,6 +84,7 @@
             this.colDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTables = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProduct = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryFiyatEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
             this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
             this.btnCustomerReset = new DevExpress.XtraEditors.SimpleButton();
@@ -152,7 +153,6 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.ımageListProductImage = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryOrderDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryFiyat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.navigationPaymets.SuspendLayout();
@@ -164,6 +164,8 @@
             this.navigationOrders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOrders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryOrderDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryFiyatEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).BeginInit();
             this.panelControl10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
@@ -203,22 +205,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcRemainder.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // repositoryOrderDelete
-            // 
-            this.repositoryOrderDelete.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.repositoryOrderDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryOrderDelete.Name = "repositoryOrderDelete";
-            this.repositoryOrderDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
             // repositoryFiyat
             // 
             this.repositoryFiyat.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.repositoryFiyat.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryFiyat.Name = "repositoryFiyat";
+            this.repositoryFiyat.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryFiyat_ButtonClick);
             // 
             // btnRezervTable
             // 
@@ -288,7 +282,7 @@
             this.navigationPaymets.Controls.Add(this.panelControlPayments);
             this.navigationPaymets.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPaymets.ImageOptions.Image")));
             this.navigationPaymets.Name = "navigationPaymets";
-            this.navigationPaymets.Size = new System.Drawing.Size(1154, 334);
+            this.navigationPaymets.Size = new System.Drawing.Size(1152, 387);
             // 
             // gridControlPayments
             // 
@@ -298,7 +292,7 @@
             this.gridControlPayments.Name = "gridControlPayments";
             this.gridControlPayments.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryPaymentDelete});
-            this.gridControlPayments.Size = new System.Drawing.Size(1154, 283);
+            this.gridControlPayments.Size = new System.Drawing.Size(1152, 336);
             this.gridControlPayments.TabIndex = 5;
             this.gridControlPayments.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPayments});
@@ -329,9 +323,9 @@
             // repositoryPaymentDelete
             // 
             this.repositoryPaymentDelete.AutoHeight = false;
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.repositoryPaymentDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryPaymentDelete.Name = "repositoryPaymentDelete";
             this.repositoryPaymentDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryPaymentDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryPaymentDelete_ButtonClick);
@@ -395,9 +389,9 @@
             this.panelControlPayments.Controls.Add(this.btnCreditCard);
             this.panelControlPayments.Controls.Add(this.btnCash);
             this.panelControlPayments.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControlPayments.Location = new System.Drawing.Point(0, 283);
+            this.panelControlPayments.Location = new System.Drawing.Point(0, 336);
             this.panelControlPayments.Name = "panelControlPayments";
-            this.panelControlPayments.Size = new System.Drawing.Size(1154, 51);
+            this.panelControlPayments.Size = new System.Drawing.Size(1152, 51);
             this.panelControlPayments.TabIndex = 4;
             // 
             // btnCreditCard
@@ -437,6 +431,9 @@
             this.gridControlOrders.Location = new System.Drawing.Point(0, 84);
             this.gridControlOrders.MainView = this.gridViewOrders;
             this.gridControlOrders.Name = "gridControlOrders";
+            this.gridControlOrders.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryFiyatEdit,
+            this.repositoryOrderDelete});
             this.gridControlOrders.Size = new System.Drawing.Size(627, 303);
             this.gridControlOrders.TabIndex = 52;
             this.gridControlOrders.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -459,6 +456,7 @@
             this.colDate1,
             this.colTables,
             this.colProduct});
+            this.gridViewOrders.CustomizationFormBounds = new System.Drawing.Rectangle(1007, 349, 264, 272);
             this.gridViewOrders.GridControl = this.gridControlOrders;
             this.gridViewOrders.Name = "gridViewOrders";
             this.gridViewOrders.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridViewOrders_RowCellStyle);
@@ -470,7 +468,17 @@
             this.colOrderDelete.Name = "colOrderDelete";
             this.colOrderDelete.Visible = true;
             this.colOrderDelete.VisibleIndex = 0;
-            this.colOrderDelete.Width = 22;
+            this.colOrderDelete.Width = 30;
+            // 
+            // repositoryOrderDelete
+            // 
+            this.repositoryOrderDelete.AutoHeight = false;
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            this.repositoryOrderDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryOrderDelete.Name = "repositoryOrderDelete";
+            this.repositoryOrderDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryOrderDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryOrderDelete_ButtonClick);
             // 
             // colProductName
             // 
@@ -480,7 +488,7 @@
             this.colProductName.OptionsColumn.AllowEdit = false;
             this.colProductName.Visible = true;
             this.colProductName.VisibleIndex = 1;
-            this.colProductName.Width = 111;
+            this.colProductName.Width = 93;
             // 
             // colId1
             // 
@@ -515,7 +523,7 @@
             this.colQuantity.Name = "colQuantity";
             this.colQuantity.Visible = true;
             this.colQuantity.VisibleIndex = 2;
-            this.colQuantity.Width = 43;
+            this.colQuantity.Width = 39;
             // 
             // colUnitPrice
             // 
@@ -528,7 +536,7 @@
             this.colUnitPrice.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colUnitPrice.Visible = true;
             this.colUnitPrice.VisibleIndex = 3;
-            this.colUnitPrice.Width = 61;
+            this.colUnitPrice.Width = 57;
             // 
             // colDiscountTotal
             // 
@@ -541,7 +549,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "DiscountTotal", "SUM={0:C2}")});
             this.colDiscountTotal.Visible = true;
             this.colDiscountTotal.VisibleIndex = 4;
-            this.colDiscountTotal.Width = 77;
+            this.colDiscountTotal.Width = 99;
             // 
             // colAmount
             // 
@@ -557,7 +565,7 @@
             this.colAmount.UnboundExpression = "[Quantity] * [UnitPrice] - [DiscountTotal]";
             this.colAmount.Visible = true;
             this.colAmount.VisibleIndex = 5;
-            this.colAmount.Width = 63;
+            this.colAmount.Width = 74;
             // 
             // colDescription1
             // 
@@ -575,7 +583,7 @@
             this.colDate1.Name = "colDate1";
             this.colDate1.Visible = true;
             this.colDate1.VisibleIndex = 7;
-            this.colDate1.Width = 145;
+            this.colDate1.Width = 98;
             // 
             // colTables
             // 
@@ -586,6 +594,13 @@
             // 
             this.colProduct.FieldName = "Product";
             this.colProduct.Name = "colProduct";
+            // 
+            // repositoryFiyatEdit
+            // 
+            this.repositoryFiyatEdit.AutoHeight = false;
+            this.repositoryFiyatEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.repositoryFiyatEdit.Name = "repositoryFiyatEdit";
             // 
             // panelControl10
             // 
@@ -1437,7 +1452,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Masa Siparişleri";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryOrderDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryFiyat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.navigationPaymets.ResumeLayout(false);
@@ -1449,6 +1463,8 @@
             this.navigationOrders.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOrders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryOrderDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryFiyatEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).EndInit();
             this.panelControl10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
@@ -1584,7 +1600,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.SimpleButton btnReceiptPrint;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryOrderDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryFiyat;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.CalcEdit calcDiscountedTotal;
@@ -1600,5 +1615,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private System.Windows.Forms.ImageList ımageListProductImage;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryFiyatEdit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryOrderDelete;
     }
 }

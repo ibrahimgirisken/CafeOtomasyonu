@@ -317,7 +317,7 @@
             // 
             // dateEdit1
             // 
-            this.dateEdit1.EditValue = null;
+            this.dateEdit1.EditValue = new System.DateTime(2023, 4, 30, 13, 52, 13, 0);
             this.dateEdit1.Location = new System.Drawing.Point(147, 303);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);

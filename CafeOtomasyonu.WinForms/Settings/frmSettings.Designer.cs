@@ -50,7 +50,7 @@
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(306, 22);
+            this.lblTitle.Size = new System.Drawing.Size(306, 36);
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "Program Ayarları";
             // 
@@ -62,7 +62,7 @@
             this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl2.Location = new System.Drawing.Point(12, 42);
+            this.labelControl2.Location = new System.Drawing.Point(12, 52);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(124, 20);
             this.labelControl2.TabIndex = 30;
@@ -70,7 +70,7 @@
             // 
             // lookUpUnitPrice
             // 
-            this.lookUpUnitPrice.Location = new System.Drawing.Point(143, 42);
+            this.lookUpUnitPrice.Location = new System.Drawing.Point(143, 52);
             this.lookUpUnitPrice.Name = "lookUpUnitPrice";
             this.lookUpUnitPrice.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lookUpUnitPrice.Properties.Appearance.Options.UseFont = true;
@@ -105,7 +105,7 @@
             // 
             // btnUnitPriceSave
             // 
-            this.btnUnitPriceSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUserAdd.ImageOptions.Image")));
+            this.btnUnitPriceSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUnitPriceSave.ImageOptions.Image")));
             this.btnUnitPriceSave.Location = new System.Drawing.Point(5, 26);
             this.btnUnitPriceSave.Name = "btnUnitPriceSave";
             this.btnUnitPriceSave.Size = new System.Drawing.Size(75, 38);

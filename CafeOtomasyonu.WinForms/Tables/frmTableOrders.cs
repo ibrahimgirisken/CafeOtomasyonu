@@ -157,15 +157,6 @@ namespace CafeOtomasyonu.WinForms.Tables
         }
 
 
-        private void repositoryPaymentDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            if (MessageBox.Show("Seçili sipariş silinsin mi?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                gridViewPayments.DeleteSelectedRows();
-                Calculate();
-            }
-        }
-
         private void repositoryOrderDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (MessageBox.Show("Seçili ödeme silinsin mi?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -174,6 +165,15 @@ namespace CafeOtomasyonu.WinForms.Tables
                 Calculate();
             }
 
+        }
+
+        private void repositoryPaymentDelete_ButtonClick(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Seçili sipariş silinsin mi?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                gridViewPayments.DeleteSelectedRows();
+                Calculate();
+            }
         }
 
         decimal getPrice(Product _product)
@@ -335,16 +335,6 @@ namespace CafeOtomasyonu.WinForms.Tables
             _tablesDal.Save(_context);
         }
 
-        private void repositoryFiyat_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            int productId = Convert.ToInt32(gridViewOrders.GetFocusedRowCellValue(colProductId));
-            var model = _productDal.GetByFilter(_context, p => p.Id == productId);
-            barFiyat1.Caption = model.UnitPrice1.ToString();
-            barFiyat2.Caption = model.UnitPrice2.ToString();
-            barFiyat3.Caption = model.UnitPrice3.ToString();
-            radialMenu1.ShowPopup(MousePosition);
-        }
-
         private void Prices(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             gridViewOrders.SetFocusedRowCellValue(colUnitPrice, e.Item.Caption);
@@ -379,5 +369,16 @@ namespace CafeOtomasyonu.WinForms.Tables
 
                 }
         }
+
+        private void repositoryFiyat_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int productId = Convert.ToInt32(gridViewOrders.GetFocusedRowCellValue(colProductId));
+            var model = _productDal.GetByFilter(_context, p => p.Id == productId);
+            barFiyat1.Caption = model.UnitPrice1.ToString();
+            barFiyat2.Caption = model.UnitPrice2.ToString();
+            barFiyat3.Caption = model.UnitPrice3.ToString();
+            radialMenu1.ShowPopup(MousePosition);
+        }
+
     }
 }

@@ -53,8 +53,7 @@
             this.barButtonTableTransactionsReport = new DevExpress.XtraBars.BarButtonItem();
             this.barSpecialReport = new DevExpress.XtraBars.BarButtonItem();
             this.btnSettings = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.ribbonPageCategory2 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
+            this.btnTakeBackup = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -70,7 +69,9 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnTakeBackup = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.btnTableOrders12 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -103,13 +104,11 @@
             this.barButtonTableTransactionsReport,
             this.barSpecialReport,
             this.btnSettings,
-            this.btnTakeBackup});
+            this.btnTakeBackup,
+            this.btnTableOrders12});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 30;
+            this.ribbon.MaxItemId = 31;
             this.ribbon.Name = "ribbon";
-            this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
-            this.ribbonPageCategory1,
-            this.ribbonPageCategory2});
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
             this.ribbonPage1});
@@ -303,15 +302,14 @@
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSettings_ItemClick);
             // 
-            // ribbonPageCategory1
+            // btnTakeBackup
             // 
-            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
-            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
-            // 
-            // ribbonPageCategory2
-            // 
-            this.ribbonPageCategory2.Name = "ribbonPageCategory2";
-            this.ribbonPageCategory2.Text = "ribbonPageCategory2";
+            this.btnTakeBackup.Caption = "Yedek Al";
+            this.btnTakeBackup.Id = 29;
+            this.btnTakeBackup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTakeBackup.ImageOptions.Image")));
+            this.btnTakeBackup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTakeBackup.ImageOptions.LargeImage")));
+            this.btnTakeBackup.Name = "btnTakeBackup";
+            this.btnTakeBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTakeBackup_ItemClick);
             // 
             // ribbonPage2
             // 
@@ -331,9 +329,9 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.AllowTextClipping = false;
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnTableOrders);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTables);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTableMovements);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnTableOrders);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Masalar";
             // 
@@ -429,14 +427,23 @@
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // btnTakeBackup
+            // ribbonPage5
             // 
-            this.btnTakeBackup.Caption = "Yedek Al";
-            this.btnTakeBackup.Id = 29;
-            this.btnTakeBackup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.btnTakeBackup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
-            this.btnTakeBackup.Name = "btnTakeBackup";
-            this.btnTakeBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTakeBackup_ItemClick);
+            this.ribbonPage5.Name = "ribbonPage5";
+            this.ribbonPage5.Text = "ribbonPage5";
+            // 
+            // ribbonPage6
+            // 
+            this.ribbonPage6.Name = "ribbonPage6";
+            this.ribbonPage6.Text = "ribbonPage6";
+            // 
+            // btnTableOrders12
+            // 
+            this.btnTableOrders12.Caption = "Masa Siparişleri";
+            this.btnTableOrders12.Id = 30;
+            this.btnTableOrders12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
+            this.btnTableOrders12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.btnTableOrders12.Name = "btnTableOrders12";
             // 
             // frmMainMenu
             // 
@@ -496,12 +503,13 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem barButtonTableTransactionsReport;
-        private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.BarButtonItem barSpecialReport;
         public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.BarButtonItem btnSettings;
-        private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory2;
         private DevExpress.XtraBars.BarButtonItem btnTakeBackup;
+        private DevExpress.XtraBars.BarButtonItem btnTableOrders12;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
     }
 }

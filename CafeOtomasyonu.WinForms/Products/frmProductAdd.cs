@@ -24,6 +24,7 @@ namespace CafeOtomasyonu.WinForms.Products
         public frmProductAdd(Product entity)
         {
             InitializeComponent();
+            dateEdit1.Text = DateTime.Now.ToString();
             _entity = entity;
             lookUpMenu.Properties.DataSource = _menuDal.GetAll(_context);
             lookUpMenu.DataBindings.Add("EditValue", _entity, "MenuId");

@@ -113,14 +113,6 @@ namespace CafeOtomasyonu.WinForms.MainMenu
 
         }
         private frmTablesStatus frm_TablesStatus;
-        private void btnTableOrders_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            if (frm_TablesStatus == null || frm_TablesStatus.IsDisposed)
-            {
-                frm_TablesStatus = new frmTablesStatus();
-                FormGet(frm_TablesStatus);
-            }
-        }
 
         private frmSales frm_Sales;
         private void btnSales_ItemClick(object sender, ItemClickEventArgs e)
@@ -247,6 +239,20 @@ namespace CafeOtomasyonu.WinForms.MainMenu
                 {
                     frm_Backup.ShowDialog();
                 }
+            }
+        }
+
+        private void btnTableOrders_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            TableOrderMethod();
+        }
+
+        private void TableOrderMethod()
+        {
+            if (frm_TablesStatus == null || frm_TablesStatus.IsDisposed)
+            {
+                frm_TablesStatus = new frmTablesStatus();
+                FormGet(frm_TablesStatus);
             }
         }
     }
