@@ -282,17 +282,16 @@
             this.navigationPaymets.Controls.Add(this.panelControlPayments);
             this.navigationPaymets.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPaymets.ImageOptions.Image")));
             this.navigationPaymets.Name = "navigationPaymets";
-            this.navigationPaymets.Size = new System.Drawing.Size(1152, 387);
+            this.navigationPaymets.Size = new System.Drawing.Size(1154, 424);
             // 
             // gridControlPayments
             // 
-            this.gridControlPayments.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlPayments.Location = new System.Drawing.Point(0, 0);
+            this.gridControlPayments.Location = new System.Drawing.Point(3, 3);
             this.gridControlPayments.MainView = this.gridViewPayments;
             this.gridControlPayments.Name = "gridControlPayments";
             this.gridControlPayments.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryPaymentDelete});
-            this.gridControlPayments.Size = new System.Drawing.Size(1152, 336);
+            this.gridControlPayments.Size = new System.Drawing.Size(1148, 368);
             this.gridControlPayments.TabIndex = 5;
             this.gridControlPayments.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPayments});
@@ -389,9 +388,9 @@
             this.panelControlPayments.Controls.Add(this.btnCreditCard);
             this.panelControlPayments.Controls.Add(this.btnCash);
             this.panelControlPayments.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControlPayments.Location = new System.Drawing.Point(0, 336);
+            this.panelControlPayments.Location = new System.Drawing.Point(0, 373);
             this.panelControlPayments.Name = "panelControlPayments";
-            this.panelControlPayments.Size = new System.Drawing.Size(1152, 51);
+            this.panelControlPayments.Size = new System.Drawing.Size(1154, 51);
             this.panelControlPayments.TabIndex = 4;
             // 
             // btnCreditCard
@@ -423,7 +422,7 @@
             this.navigationOrders.Controls.Add(this.navigationPage4);
             this.navigationOrders.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationOrders.ImageOptions.Image")));
             this.navigationOrders.Name = "navigationOrders";
-            this.navigationOrders.Size = new System.Drawing.Size(1152, 387);
+            this.navigationOrders.Size = new System.Drawing.Size(1154, 424);
             // 
             // gridControlOrders
             // 
@@ -434,7 +433,7 @@
             this.gridControlOrders.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryFiyatEdit,
             this.repositoryOrderDelete});
-            this.gridControlOrders.Size = new System.Drawing.Size(627, 303);
+            this.gridControlOrders.Size = new System.Drawing.Size(629, 340);
             this.gridControlOrders.TabIndex = 52;
             this.gridControlOrders.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOrders});
@@ -614,14 +613,14 @@
             this.panelControl10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl10.Location = new System.Drawing.Point(0, 0);
             this.panelControl10.Name = "panelControl10";
-            this.panelControl10.Size = new System.Drawing.Size(627, 84);
+            this.panelControl10.Size = new System.Drawing.Size(629, 84);
             this.panelControl10.TabIndex = 44;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(136, 31);
+            this.txtDescription.Location = new System.Drawing.Point(135, 31);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(470, 50);
+            this.txtDescription.Size = new System.Drawing.Size(488, 50);
             this.txtDescription.TabIndex = 26;
             // 
             // btnCustomerReset
@@ -644,12 +643,12 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateDate.Size = new System.Drawing.Size(168, 22);
+            this.dateDate.Size = new System.Drawing.Size(185, 22);
             this.dateDate.TabIndex = 24;
             // 
             // lookUpCustomer
             // 
-            this.lookUpCustomer.Location = new System.Drawing.Point(136, 6);
+            this.lookUpCustomer.Location = new System.Drawing.Point(135, 6);
             this.lookUpCustomer.Name = "lookUpCustomer";
             this.lookUpCustomer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lookUpCustomer.Properties.Appearance.Options.UseFont = true;
@@ -663,7 +662,7 @@
             this.lookUpCustomer.Properties.NullText = "Müşteri Seçiniz";
             this.lookUpCustomer.Properties.NullValuePrompt = "Müşteri Seçiniz";
             this.lookUpCustomer.Properties.ValueMember = "Id";
-            this.lookUpCustomer.Size = new System.Drawing.Size(184, 20);
+            this.lookUpCustomer.Size = new System.Drawing.Size(185, 20);
             this.lookUpCustomer.TabIndex = 23;
             // 
             // labelControl23
@@ -711,9 +710,9 @@
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.xtraTabControl1.Location = new System.Drawing.Point(627, 0);
+            this.xtraTabControl1.Location = new System.Drawing.Point(629, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(525, 387);
+            this.xtraTabControl1.Size = new System.Drawing.Size(525, 424);
             this.xtraTabControl1.TabIndex = 54;
             // 
             // navigationPage4
@@ -1000,16 +999,17 @@
             // 
             this.navigationTable.Controls.Add(this.navigationOrders);
             this.navigationTable.Controls.Add(this.navigationPaymets);
-            this.navigationTable.Location = new System.Drawing.Point(2, 47);
+            this.navigationTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationTable.Location = new System.Drawing.Point(0, 22);
             this.navigationTable.Name = "navigationTable";
             this.navigationTable.PageProperties.ShowCollapseButton = false;
             this.navigationTable.PageProperties.ShowExpandButton = false;
             this.navigationTable.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationOrders,
             this.navigationPaymets});
-            this.navigationTable.RegularSize = new System.Drawing.Size(1239, 451);
+            this.navigationTable.RegularSize = new System.Drawing.Size(1241, 488);
             this.navigationTable.SelectedPage = this.navigationOrders;
-            this.navigationTable.Size = new System.Drawing.Size(1239, 451);
+            this.navigationTable.Size = new System.Drawing.Size(1241, 488);
             this.navigationTable.TabIndex = 8;
             this.navigationTable.Text = "navigationPane1";
             // 
@@ -1196,9 +1196,9 @@
             this.panelControl3.Controls.Add(this.labelControl5);
             this.panelControl3.Controls.Add(this.labelControl7);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(0, 504);
+            this.panelControl3.Location = new System.Drawing.Point(0, 510);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1241, 97);
+            this.panelControl3.Size = new System.Drawing.Size(1241, 91);
             this.panelControl3.TabIndex = 57;
             // 
             // calcDiscountedTotal
@@ -1436,14 +1436,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1241, 675);
-            this.Controls.Add(this.panelControl3);
-            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.navigationTable);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnRezervTable);
             this.Controls.Add(this.btnNullTable);
             this.Controls.Add(this.btnFullTable);
+            this.Controls.Add(this.panelControl3);
+            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);

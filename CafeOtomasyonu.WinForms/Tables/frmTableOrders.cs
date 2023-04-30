@@ -18,6 +18,8 @@ using DevExpress.Accessibility;
 using CafeOtomasyonu.WinForms.ReportFile;
 using DevExpress.Utils;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraTab;
 
 namespace CafeOtomasyonu.WinForms.Tables
@@ -85,7 +87,7 @@ namespace CafeOtomasyonu.WinForms.Tables
                 panel.Dock = DockStyle.Fill;
                 page.Controls.Add(panel);
 
-                var modelFasterOrder = _productDal.GetAll(_context,p=>p.MenuId==item.Id);
+                var modelFasterOrder = _productDal.GetAll(_context, p => p.MenuId == item.Id);
                 foreach (var product in modelFasterOrder)
                 {
                     SimpleButton btn = new SimpleButton();
@@ -107,11 +109,23 @@ namespace CafeOtomasyonu.WinForms.Tables
             }
         }
 
+        private bool UpdateGridViewRow(int id)
+        {
+            var result = _tablesMovementsDal.GetByFilter(_context, p => p.Product.Id == id);
+            if (result != null)
+            {
+                return true;
+            }
+
+            return false;
+        }
         private void Btn_Click(object sender, EventArgs e)
         {
             var senderBtn = sender as SimpleButton;
             int productId = Convert.ToInt32(senderBtn.Name);
             var _product = _productDal.GetByFilter(_context, p => p.Id == productId);
+
+
             TableMovements tableMovements = new TableMovements
             {
                 SalesCode = _salesCode,
@@ -119,11 +133,13 @@ namespace CafeOtomasyonu.WinForms.Tables
                 TableId = _tableId,
                 Quantity = 1,
                 DiscountTotal = 0,
-                UnitPrice =getPrice(_product),
+                UnitPrice = getPrice(_product),
                 Description = "",
                 Date = DateTime.Now
             };
             _tablesMovementsDal.AddOrUpdate(_context, tableMovements);
+
+
         }
 
         private void btnCustomerReset_Click(object sender, EventArgs e)
@@ -179,8 +195,8 @@ namespace CafeOtomasyonu.WinForms.Tables
         decimal getPrice(Product _product)
         {
             decimal unitPrice = _product.UnitPrice1;
-            var model = _context.Settings.FirstOrDefault(p=>p.SettingDefinition=="Unit Price");
-            if (model!=null)
+            var model = _context.Settings.FirstOrDefault(p => p.SettingDefinition == "Unit Price");
+            if (model != null)
             {
                 switch (model.SettingName)
                 {
@@ -225,7 +241,8 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            gridControlOrders.DataSource = _context.TableMovements.Local.ToBindingList();
+            gridControlPayments.DataSource = _context.PaymentTransactions.Local.ToBindingList();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -362,7 +379,7 @@ namespace CafeOtomasyonu.WinForms.Tables
                     else if (_sales.CustomerId != null)
 
                     {
-                        rptSalesReceipt _rptSalesReceipt = new rptSalesReceipt(salesCode: _salesCode,info:_salesCode+" "+_sales.Customers.FullName,_sales);
+                        rptSalesReceipt _rptSalesReceipt = new rptSalesReceipt(salesCode: _salesCode, info: _salesCode + " " + _sales.Customers.FullName, _sales);
                         frmReportView frm = new frmReportView(_rptSalesReceipt);
                         frm.ShowDialog();
                     }

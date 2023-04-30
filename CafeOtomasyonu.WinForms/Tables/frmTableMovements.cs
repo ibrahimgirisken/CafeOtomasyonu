@@ -49,5 +49,10 @@ namespace CafeOtomasyonu.WinForms.Tables
         {
             this.Close();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            gridControlTableMovements.DataSource = _tablesMovementsDal.GetAll(context);
+        }
     }
 }

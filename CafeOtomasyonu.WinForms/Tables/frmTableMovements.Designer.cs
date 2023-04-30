@@ -99,6 +99,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(75, 38);
             this.btnRefresh.TabIndex = 2;
             this.btnRefresh.Text = "Yenile";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // gridControlTableMovements
             // 
