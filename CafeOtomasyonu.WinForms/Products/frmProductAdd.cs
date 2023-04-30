@@ -38,7 +38,14 @@ namespace CafeOtomasyonu.WinForms.Products
             {
                 if (_entity.Image != null)
                 {
-                    pictureEdit1.Image = Image.FromFile(_entity.Image);
+                    try
+                    {
+                        pictureEdit1.Image = Image.FromFile(_entity.Image);
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                    }
                 }
             }
         }
@@ -48,6 +55,10 @@ namespace CafeOtomasyonu.WinForms.Products
             if (pictureEdit1.GetLoadedImageLocation() != "")
             {
                 string hrefPath = $"{Application.StartupPath}\\Image\\{txtProductName.Text}-{txtProductNumber.Text}.jpg";
+                if (File.Exists(hrefPath))
+                {
+                    File.Delete(hrefPath);
+                }
                 File.Copy(pictureEdit1.GetLoadedImageLocation(), hrefPath);
                 _entity.Image = $"Image\\{txtProductName.Text}-{txtProductNumber.Text}.jpg";
             }

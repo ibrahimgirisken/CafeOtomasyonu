@@ -5,12 +5,13 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CafeOtomasyonu.Entities.Tools;
 
 namespace CafeOtomasyonu.Entities.Models
 {
     public class CafeContext : DbContext
     {
-        public CafeContext() : base("name=connection")
+        public CafeContext() : base(ConnectionTools.conn())
         {
 
         }
@@ -26,6 +27,7 @@ namespace CafeOtomasyonu.Entities.Models
         public  DbSet<Customers> Customers { get; set; }
         public  DbSet<OrderCode> OrderCodes { get; set; }
         public DbSet<Settings> Settings { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new MenuMap());

@@ -12,10 +12,10 @@ namespace CafeOtomasyonu.Entities.Models
         public int Id { get; set; }
         public string TableName { get; set; }
         public string Description { get; set; }
-        public bool Status { get; set; }
-        public bool Rezerv { get; set; }
-        public DateTime SavedDate { get; set; }
-        public DateTime UpdateDate { get; set; }
+        public bool Status { get; set; } = false;
+        public bool Rezerv { get; set; } = false;
+        public DateTime SavedDate { get; set; }=DateTime.Now;
+        public DateTime UpdateDate { get; set; }=DateTime.Now;
         public string Process { get; set; }
         public string OrderCode { get; set; }
         public int? UserId { get; set; }

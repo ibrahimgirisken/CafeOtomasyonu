@@ -385,7 +385,6 @@
             // 
             // btnUserAdd
             // 
-            this.btnUserAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductAdd.ImageOptions.Image")));
             this.btnUserAdd.Location = new System.Drawing.Point(5, 26);
             this.btnUserAdd.Name = "btnUserAdd";
             this.btnUserAdd.Size = new System.Drawing.Size(75, 38);

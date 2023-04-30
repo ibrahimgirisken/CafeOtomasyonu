@@ -70,6 +70,7 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnTakeBackup = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -101,9 +102,10 @@
             this.barButtonItem3,
             this.barButtonTableTransactionsReport,
             this.barSpecialReport,
-            this.btnSettings});
+            this.btnSettings,
+            this.btnTakeBackup});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 29;
+            this.ribbon.MaxItemId = 30;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1,
@@ -407,6 +409,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnHelp);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAbout);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSettings);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnTakeBackup);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Ayarlar";
             // 
@@ -425,6 +428,15 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // btnTakeBackup
+            // 
+            this.btnTakeBackup.Caption = "Yedek Al";
+            this.btnTakeBackup.Id = 29;
+            this.btnTakeBackup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
+            this.btnTakeBackup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.btnTakeBackup.Name = "btnTakeBackup";
+            this.btnTakeBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTakeBackup_ItemClick);
             // 
             // frmMainMenu
             // 
@@ -490,5 +502,6 @@
         public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.BarButtonItem btnSettings;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory2;
+        private DevExpress.XtraBars.BarButtonItem btnTakeBackup;
     }
 }

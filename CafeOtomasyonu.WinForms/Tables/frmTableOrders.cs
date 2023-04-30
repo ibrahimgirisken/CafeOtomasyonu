@@ -16,6 +16,9 @@ using CafeOtomasyonu.WinForms.Products;
 using CafeOtomasyonu.WinForms.ReportForm;
 using DevExpress.Accessibility;
 using CafeOtomasyonu.WinForms.ReportFile;
+using DevExpress.Utils;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraTab;
 
 namespace CafeOtomasyonu.WinForms.Tables
 {
@@ -35,6 +38,7 @@ namespace CafeOtomasyonu.WinForms.Tables
         private bool _packageOrder = false;
         private bool _print;
         frmProductSelect frm = new frmProductSelect();
+        private MenuDal menuDal = new MenuDal();
 
         public frmTableOrders(int? tableId = null, string tableName = null, string salesCode = null, bool packageOrder = false)
         {
@@ -64,9 +68,63 @@ namespace CafeOtomasyonu.WinForms.Tables
                 txtDescription.Text = _sales.Description;
                 dateDate.Text = _sales.EndProcessDate.ToString();
             }
+            FasterOrder();
 
         }
 
+        public void FasterOrder()
+        {
+            var model = menuDal.GetAll(_context);
+            foreach (var item in model)
+            {
+                var page = new XtraTabPage();
+                page.Text = item.MenuName;
+                page.Name = item.Id.ToString();
+                xtraTabControl1.TabPages.Add(page);
+                FlowLayoutPanel panel = new FlowLayoutPanel();
+                panel.Dock = DockStyle.Fill;
+                page.Controls.Add(panel);
+
+                var modelFasterOrder = _productDal.GetAll(_context,p=>p.MenuId==item.Id);
+                foreach (var product in modelFasterOrder)
+                {
+                    SimpleButton btn = new SimpleButton();
+                    btn.Text = product.ProductName;
+                    btn.Name = product.Id.ToString();
+                    btn.Size = new Size(100, 100);
+                    btn.Appearance.TextOptions.VAlignment = VertAlignment.Bottom;
+                    btn.ImageToTextAlignment = ImageAlignToText.TopCenter;
+                    var img = Image.FromFile(product.Image);
+                    ımageListProductImage.Images.Add(img);
+                    btn.ImageList = ımageListProductImage;
+                    btn.Image = ımageListProductImage.Images[0];
+                    ımageListProductImage.Images.RemoveAt(0);
+                    btn.Appearance.BackColor = Control.DefaultBackColor;
+                    btn.BorderStyle = BorderStyles.NoBorder;
+                    panel.Controls.Add(btn);
+                    btn.Click += Btn_Click;
+                }
+            }
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            var senderBtn = sender as SimpleButton;
+            int productId = Convert.ToInt32(senderBtn.Name);
+            var _product = _productDal.GetByFilter(_context, p => p.Id == productId);
+            TableMovements tableMovements = new TableMovements
+            {
+                SalesCode = _salesCode,
+                ProductId = productId,
+                TableId = _tableId,
+                Quantity = 1,
+                DiscountTotal = 0,
+                UnitPrice =getPrice(_product),
+                Description = "",
+                Date = DateTime.Now
+            };
+            _tablesMovementsDal.AddOrUpdate(_context, tableMovements);
+        }
 
         private void btnCustomerReset_Click(object sender, EventArgs e)
         {
@@ -118,22 +176,22 @@ namespace CafeOtomasyonu.WinForms.Tables
 
         }
 
-        decimal getPrice()
+        decimal getPrice(Product _product)
         {
-            decimal unitPrice = frm._product.UnitPrice1;
+            decimal unitPrice = _product.UnitPrice1;
             var model = _context.Settings.FirstOrDefault(p=>p.SettingDefinition=="Unit Price");
             if (model!=null)
             {
                 switch (model.SettingName)
                 {
                     case "UnitPrice1":
-                        unitPrice = frm._product.UnitPrice1;
+                        unitPrice = _product.UnitPrice1;
                         break;
                     case "UnitPrice2":
-                        unitPrice = frm._product.UnitPrice2;
+                        unitPrice = _product.UnitPrice2;
                         break;
                     case "UnitPrice3":
-                        unitPrice = frm._product.UnitPrice3;
+                        unitPrice = _product.UnitPrice3;
                         break;
                 }
             }
@@ -150,7 +208,7 @@ namespace CafeOtomasyonu.WinForms.Tables
                     TableId = _tableId,
                     ProductId = frm._product.Id,
                     Quantity = 1,
-                    UnitPrice = getPrice(),
+                    UnitPrice = getPrice(frm._product),
                     DiscountTotal = 0,
                     Description = txtDescription.Text,
                     Date = DateTime.Now

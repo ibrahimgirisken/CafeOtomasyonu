@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CafeOtomasyonu.Entities.DAL;
 using CafeOtomasyonu.Entities.Models;
+using CafeOtomasyonu.Entities.Tools;
 using CafeOtomasyonu.WinForms.Menus;
 using CafeOtomasyonu.WinForms.Payments;
 using DevExpress.XtraEditors;
@@ -32,6 +33,7 @@ namespace CafeOtomasyonu.WinForms.MainMenu
         public frmMainMenu()
         {
             InitializeComponent();
+            ConnectionTools.FillData(context);
             if (!context.Users.Any(u => u.UserName == "Admin"))
             {
                 Entities.Models.Users userAdminCreate = new Entities.Models.Users
@@ -235,6 +237,17 @@ namespace CafeOtomasyonu.WinForms.MainMenu
                 }
             }
 
+        }
+        frmBackup frm_Backup;
+        private void btnTakeBackup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            using (frm_Backup = new frmBackup())
+            {
+                if (frm_Backup != null || frm_Backup.IsDisposed)
+                {
+                    frm_Backup.ShowDialog();
+                }
+            }
         }
     }
 }

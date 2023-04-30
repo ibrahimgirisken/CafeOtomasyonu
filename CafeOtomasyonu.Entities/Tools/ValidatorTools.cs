@@ -29,5 +29,6 @@ namespace CafeOtomasyonu.Entities.Tools
             return result;
 
         }
+
     }
 }
